@@ -46,12 +46,23 @@ def test_classify_labels(raw_report, paper_reports):
             "note": "",
         },
     ]
+    rows.append(
+        {
+            "construct_a": "Demands",
+            "construct_b": "Effort",
+            "rho": "0.9",
+            "source": "s",
+            "status": "placeholder",
+            "note": "",
+        }
+    )
     out = classify(report, rows, threshold=0.8)
     assert out[0].definitional == "identical" and out[0].declaration == "distinct_from"
-    assert out[0].label == "definitionally distinct, empirically indistinguishable"
+    assert out[0].label == "identical on both counts"
     assert out[1].label == "distinct on both counts"
     assert out[2].label == "insufficient data"
     assert out[3].empirical == "unknown"
+    assert out[4].label == "definitionally distinct, empirically indistinguishable"
     md = render(out, 0.8)
     assert "Exhaustion | Vigor" in md
 

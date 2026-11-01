@@ -13,7 +13,7 @@
       "definitional": "identical",
       "declaration": "distinct_from",
       "empirical": "distinct",
-      "label": "distinct on both counts"
+      "label": "definitionally identical, empirically distinct"
     },
     {
       "a": "Cynicism",
@@ -27,7 +27,7 @@
       "definitional": "identical",
       "declaration": "distinct_from",
       "empirical": "distinct",
-      "label": "distinct on both counts"
+      "label": "definitionally identical, empirically distinct"
     },
     {
       "a": "ReducedEfficacy",
@@ -111,7 +111,7 @@
       "definitional": "identical",
       "declaration": "distinct_from",
       "empirical": "distinct",
-      "label": "distinct on both counts"
+      "label": "definitionally identical, empirically distinct"
     },
     {
       "a": "ShiromVigor",

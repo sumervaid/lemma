@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "lemma-pipeline"
 version = "0.1.0"
 description = "AI formalization pipeline, compiler report generator and verification-priority scorer for the Lemma type system"
-readme = "../README.md"
+readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "Apache-2.0" }
 authors = [{ name = "Sumer Vaid", email = "svaid@hbs.edu" }]

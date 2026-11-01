@@ -157,6 +157,10 @@ def formalize_paper(
         generated_at=datetime.now(UTC).isoformat(timespec="seconds"),
     )
     if result.declined or result.lean is None:
+        # A stale module from an earlier accepted run must not survive a decline.
+        stale = paths.generated / f"{module}.lean"
+        if stale.exists():
+            stale.unlink()
         _save_report(paths, report)
         return report
 

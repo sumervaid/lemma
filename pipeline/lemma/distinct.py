@@ -112,11 +112,17 @@ def classify(report: dict, rows: list[dict], threshold: float = DEFAULT_THRESHOL
 
 
 def _label(definitional: str, decl: str, empirical: str) -> str:
+    """Four-way label from the compiler's decision and the correlation.
+
+    Definitional distinctness is the compiler's: anything other than
+    ``identical`` is definitionally distinct. The scholar's declaration is
+    reported alongside but does not change the label, so that a declared
+    ``distinct_from`` on an identical pair stays visible as a vocabulary
+    question rather than disappearing into the declaration.
+    """
     if definitional == "unknown" or empirical == "unknown":
         return "insufficient data"
-    def_distinct = definitional in {"disjoint", "overlapping"} or decl in {"distinct_from", "subtype_of"}
-    if definitional == "identical" and decl == "alias_of":
-        def_distinct = False
+    def_distinct = definitional != "identical"
     if def_distinct and empirical == "indistinguishable":
         return "definitionally distinct, empirically indistinguishable"
     if def_distinct and empirical == "distinct":
