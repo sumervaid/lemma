@@ -34,7 +34,17 @@ from .config import LLMConfig, Paths, find_repo_root
 from .distinct import DEFAULT_THRESHOLD, classify, read_csv, render
 from .doctor import render as render_doctor
 from .doctor import run_checks
-from .draft import CATEGORIES, HORIZONS, LEVELS, all_parts, parse_catalog, render_lean, submit, to_identifier
+from .draft import (
+    CATEGORIES,
+    HORIZONS,
+    LEVELS,
+    all_parts,
+    library_built,
+    parse_catalog,
+    render_lean,
+    submit,
+    to_identifier,
+)
 from .explore import (
     AmbiguousNameError,
     Library,
@@ -50,7 +60,7 @@ from .explore import (
     theory_name,
 )
 from .formalize import formalize_paper
-from .lean import toolchain_available
+from .lean import lake_build, toolchain_available
 from .llm import FixtureProvider, OpenAICompatibleProvider
 from .score import load_scoring_config, render_agenda, score_library
 from .site import build_site
@@ -292,6 +302,15 @@ def cmd_formalize(args: argparse.Namespace) -> int:
     if not toolchain_available():
         print("error: lean/lake not on PATH (set LEMMA_LEAN_BIN)", file=sys.stderr)
         return 2
+    if not library_built(paths.root):
+        # Candidates elaborate against the compiled library. On an unbuilt checkout every
+        # candidate would fail to import, which would demote accepted modules to failures.
+        print("Building the library first. This takes a minute or two.")
+        built = lake_build(paths.root)
+        if not built.ok:
+            print(built.stdout[-2000:] or built.stderr[-2000:], file=sys.stderr)
+            print("error: the library did not build, so no paper was formalized", file=sys.stderr)
+            return 2
     raw_path = paths.reports / "library_raw.json"
     library_raw = json.loads(raw_path.read_text(encoding="utf-8")) if raw_path.exists() else None
     if args.offline:

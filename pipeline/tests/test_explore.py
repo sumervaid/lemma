@@ -289,3 +289,18 @@ def test_generated_draft_compiles_and_matches_the_overlap_count(lib, tmp_path):
     expected = sum(overlap_kind(keys, other) != "none" for other in lib.keys.values())
     warned = sum(m.is_overlap_warning() or m.first_line.startswith("shares primitives") for m in result.messages)
     assert warned == expected
+
+
+def test_formalize_refuses_to_run_when_the_library_cannot_build(tmp_path, monkeypatch, capsys):
+    from lemma.lean import LeanResult
+
+    monkeypatch.setattr("lemma.cli.toolchain_available", lambda: True)
+    monkeypatch.setattr("lemma.cli.library_built", lambda root: False)
+    monkeypatch.setattr("lemma.cli.lake_build", lambda root: LeanResult(ok=False, stdout="boom"))
+
+    def must_not_run(*args, **kwargs):
+        raise AssertionError("a paper was formalized against an unbuilt library")
+
+    monkeypatch.setattr("lemma.cli.formalize_paper", must_not_run)
+    assert main(["--root", str(tmp_path), "formalize", "--offline"]) == 2
+    assert "no paper was formalized" in capsys.readouterr().err
