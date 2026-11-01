@@ -97,6 +97,13 @@ inductive IntentionKind
   | Turnover
   deriving DecidableEq, Repr, Inhabited
 
+/-- Big Five personality traits used as moderators in the pilot. -/
+inductive TraitKind
+  | Conscientiousness
+  | Neuroticism
+  | Extraversion
+  deriving DecidableEq, Repr, Inhabited
+
 /-- Concrete work behaviors with a behavioral or administrative source. -/
 inductive BehaviorKind
   | TaskFocus
@@ -174,5 +181,9 @@ administrative (Christian et al. 2011). -/
 
 /-- A concrete work behavior of kind `kind`. -/
 @[primitive] structure Behavior (kind : BehaviorKind) extends Primitive
+
+/-- A stable personality trait of kind `kind` (Costa & McCrae 1992). A
+dispositional primitive: the pilot uses traits only as moderators. -/
+@[primitive] structure Trait (kind : TraitKind) extends Primitive
 
 end Lemma

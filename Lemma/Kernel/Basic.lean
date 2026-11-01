@@ -124,12 +124,12 @@ instance : ToString Source := ⟨Source.toString⟩
 instance : ToString Direction := ⟨Direction.toString⟩
 instance : ToString EvidenceKind := ⟨EvidenceKind.toString⟩
 
-/-- Sign algebra used when composing propositions transitively.
-`Positive ∘ Positive = Positive`, `Positive ∘ Negative = Negative`,
-`Null` absorbs, and `Curvilinear` has no defined composition. -/
+/-- Sign algebra used when composing propositions transitively along a
+mediating path. `Positive ∘ Positive = Positive`, `Positive ∘ Negative =
+Negative`. A `Null` link means the path contributes nothing, which says
+nothing about the total relation, so the composition is undefined, as it
+is for `Curvilinear`. -/
 def Direction.compose : Direction → Direction → Option Direction
-  | .Null, _ => some .Null
-  | _, .Null => some .Null
   | .Positive, .Positive => some .Positive
   | .Negative, .Negative => some .Positive
   | .Positive, .Negative => some .Negative

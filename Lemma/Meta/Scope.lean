@@ -11,6 +11,10 @@ must live at that scope, or be routed to it through registered rules:
 * an `@[temporal]` rule from the construct (or from the aggregation target)
   to a registered construct at the declared horizon (same level).
 
+A construct declared at `Horizon.Static` is a constant function of time
+and so embeds into every horizon at its own level (the *static embedding*
+rule): a trait may enter a weekly proposition without a temporal rule.
+
 Routing is decidable by finite search over the registry. A proposition
 whose constructs cannot be routed is rejected by `@[proposition]`.
 -/
@@ -26,12 +30,16 @@ inductive RouteResult
   | failed (reason : String)
   deriving Inhabited, Repr
 
+/-- Horizon match: equal, or the construct is static (static embedding). -/
+def horizonMatches (constructHorizon declared : Horizon) : Bool :=
+  constructHorizon == declared || constructHorizon == .Static
+
 /-- Route construct `c` to scope `(level, horizon)` through registered rules. -/
 def routeConstruct (env : Environment) (c : Name) (level : Level) (horizon : Horizon) : RouteResult :=
   match findConstruct? env c with
   | none => .failed s!"{shortName c} is not a registered construct"
   | some ce =>
-    if ce.level == level && ce.horizon == horizon then .exact
+    if ce.level == level && horizonMatches ce.horizon horizon then .exact
     else
       -- level step
       let levelCandidates : List (Name × List Name) :=
@@ -48,12 +56,12 @@ def routeConstruct (env : Environment) (c : Name) (level : Level) (horizon : Hor
         levelCandidates.flatMap fun (n, rules) =>
           match findConstruct? env n with
           | some t =>
-            if t.horizon == horizon then [(n, rules)]
+            if horizonMatches t.horizon horizon then [(n, rules)]
             else
               (temporalExt.all env).toList.filterMap fun tr =>
                 if tr.source == n then
                   match findConstruct? env tr.target with
-                  | some t' => if t'.horizon == horizon then some (tr.target, rules ++ [tr.name]) else none
+                  | some t' => if horizonMatches t'.horizon horizon then some (tr.target, rules ++ [tr.name]) else none
                   | none => none
                 else none
           | none => []

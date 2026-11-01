@@ -145,7 +145,7 @@ syntax (name := declareOverlapCmd) "declare_overlap " ident overlapDeclKind iden
       | .alias_of, k => logWarning s!"`alias_of` declared, but the overlap kind is {k}: {shortName an} and {shortName bn} do not reduce to the same primitives"
       | .subtype_of, .subtype => pure ()
       | .subtype_of, k => logWarning s!"`subtype_of` declared, but the overlap kind is {k}"
-      | .distinct_from, .identity => logWarning s!"`distinct_from` declared for an identity overlap: {shortName an} and {shortName bn} reduce to the same primitives at the same scope; the reason should state what distinguishes them"
+      | .distinct_from, .identity => logInfo s!"`distinct_from` declared for an identity overlap: {shortName an} and {shortName bn} reduce to the same primitives at the same scope; the reason should state what distinguishes them"
       | .distinct_from, _ => pure ()
       modifyEnv fun env => overlapDeclExt.addEntry env { a := an, b := bn, kind, reason := reasonStr, module := env.mainModule }
   | _ => throwUnsupportedSyntax
