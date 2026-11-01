@@ -23,6 +23,8 @@
     none: "Separate definitions. The constructs share no part at the same scope."
   };
 
+  var KIND_WORD = { identity: "identical", subtype: "nested", partial: "partial" };
+  var DECL_WORD = { distinct_from: "Declared distinct", alias_of: "Declared an alias", subtype_of: "Declared a subtype" };
   function esc(v) {
     return String(v == null ? "" : v).replace(/[&<>"']/g, function (ch) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
@@ -173,7 +175,7 @@
       '<div><div class="eyebrow">Built from</div><div class="chips" style="margin-top:5px">' + c.parts.map(function (p) { return chip(p); }).join("") + "</div></div></section>" +
       "<section><h2>Shares parts with " + overlaps.length + ' constructs</h2>' + (overlaps.length ? '<div class="scroll"><table><thead><tr><th>Construct</th><th>Overlap</th><th>Recorded decision</th><th></th></tr></thead><tbody>' + overlaps.map(function (o) {
         var other = o.a === c.id ? o.b : o.a;
-        return "<tr><td>" + cLink(other) + '</td><td><span class="pill ' + esc(o.kind) + '">' + esc(o.kind) + "</span></td><td>" + (o.declared ? esc(o.declared.kind + ". " + o.declared.reason) : '<span class="pill">awaiting a decision</span>') + '</td><td><button class="linkish" type="button" data-compare="' + esc(c.id + "|" + other) + '">Compare</button></td></tr>';
+        return "<tr><td>" + cLink(other) + '</td><td><span class="pill ' + esc(o.kind) + '">' + esc(KIND_WORD[o.kind]) + "</span></td><td>" + (o.declared ? esc(DECL_WORD[o.declared.kind] + ". " + o.declared.reason) : '<span class="pill">awaiting a decision</span>') + '</td><td><button class="linkish" type="button" data-compare="' + esc(c.id + "|" + other) + '">Compare</button></td></tr>';
       }).join("") + "</tbody></table></div>" : '<p class="note">This construct shares no part with another at the same scope.</p>') + "</section>" +
       "<section><h2>Appears in " + claims.length + " claims</h2>" + (claims.length ? claimTable(claims) : '<p class="note">No claim in the library uses this construct.</p>') + "</section>";
     bindGo();
@@ -199,7 +201,7 @@
       '<div class="split">' + col("Shared", shared, "shared") + col("Only in " + a.id, onlyA) + col("Only in " + b.id, onlyB) + "</div>" +
       (shifts.length ? '<p class="note">The same part appears at a different scope: ' + esc(shifts.map(function (p) { return p.label; }).join(", ")) + ". A temporal or aggregation rule could connect them.</p>" : "") +
       '<div class="split"><div><div class="eyebrow">' + esc(a.id) + '</div><p style="font-family:var(--read)">' + esc(a.doc) + "</p></div><div><div class=\"eyebrow\">" + esc(b.id) + '</div><p style="font-family:var(--read)">' + esc(b.doc) + "</p></div></div>" +
-      (decl ? '<div><div class="eyebrow">Recorded decision</div><p><span class="pill">' + esc(decl.kind) + "</span> " + esc(decl.reason) + "</p></div>" : "") +
+      (decl ? '<div><div class="eyebrow">Recorded decision</div><p><span class="pill">' + esc(DECL_WORD[decl.kind]) + "</span> " + esc(decl.reason) + "</p></div>" : "") +
       (corr ? '<div class="status">Correlation on file ' + esc(corr.rho) + ". Status " + esc(corr.status) + ". This value awaits a check against " + esc(corr.source || "a source") + ".</div>" : "") +
       (claims.length ? '<div><div class="eyebrow">Claims linking the pair</div>' + claimTable(claims) + "</div>" : "") + "</div>";
   }
@@ -337,7 +339,7 @@
     document.getElementById("draft-out").innerHTML =
       '<div class="verdict"><strong>' + esc(verdict) + '</strong><span class="note">' + counts.identity + " identical, " + counts.subtype + " nested, " + counts.partial + " partial. Each overlap asks for a recorded decision with a stated reason.</span></div>" +
       (hits.length ? '<div class="scroll"><table><thead><tr><th>Construct</th><th>Overlap</th><th>Entry</th></tr></thead><tbody>' + hits.slice(0, 40).map(function (h) {
-        return "<tr><td>" + cLink(h.c.id) + '</td><td><span class="pill ' + esc(h.kind) + '">' + esc(h.kind) + "</span></td><td>" + originPill(h.c.origin) + "</td></tr>";
+        return "<tr><td>" + cLink(h.c.id) + '</td><td><span class="pill ' + esc(h.kind) + '">' + esc(KIND_WORD[h.kind]) + "</span></td><td>" + originPill(h.c.origin) + "</td></tr>";
       }).join("") + "</tbody></table></div>" : "") +
       (valid ? '<div class="head-row"><div class="eyebrow">Ready to compile</div><button class="btn" id="copy" type="button">Copy the Lean file</button></div><pre class="code" id="lean">' + esc(lean) + "</pre>" : "") +
       '<p class="note">This page applies the overlap rule alone. The compiler runs all four checks. Save the file as drafts/' + esc(valid ? name : "MyIdea") + '.lean, then run lemma try on the file, or open a <a href="' + esc(D.repository) + '/discussions" rel="noopener">discussion</a> to propose the construct.</p>';

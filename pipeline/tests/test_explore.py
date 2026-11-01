@@ -233,7 +233,7 @@ def test_browser_logic_matches_python(data, lib):
         (["find", "zzzz"], 1, "No matches"),
         (["show", "Thriving"], 0, "Built from"),
         (["show", "zzz"], 1, ""),
-        (["compare", "Exhaustion", "Vigor"], 0, "identity"),
+        (["compare", "Exhaustion", "Vigor"], 0, "identical"),
         (["compare", "Vigor", "zzz"], 1, ""),
     ],
 )

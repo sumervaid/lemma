@@ -44,6 +44,13 @@ KIND_MEANING = {
     "none": "The two constructs share no part at the same scope.",
 }
 
+KIND_WORD = {"identity": "identical", "subtype": "nested", "partial": "partial", "none": "no overlap"}
+DECLARATION_WORD = {
+    "distinct_from": "declared distinct",
+    "alias_of": "declared an alias",
+    "subtype_of": "declared a subtype",
+}
+
 PIPELINE_LABEL = "pipeline fixture"
 CURATED_LABEL = "curated"
 
@@ -266,8 +273,8 @@ def describe_construct(lib: Library, c: dict) -> str:
         lines += ["", f"  Shares parts with {len(overlaps)} other constructs"]
         for o in overlaps[:12]:
             other = o["b"] if o["a"] == c["name"] else o["a"]
-            declared = "declared " + o["declared"]["kind"] if o.get("declared") else "undeclared"
-            lines.append(f"    {theory_name(other):38s} {o['kind']:9s} {declared}")
+            declared = DECLARATION_WORD[o["declared"]["kind"]] if o.get("declared") else "awaiting a decision"
+            lines.append(f"    {theory_name(other):38s} {KIND_WORD[o['kind']]:9s} {declared}")
         if len(overlaps) > 12:
             lines.append(f"    plus {len(overlaps) - 12} more")
     claims = lib.claims_about(c["name"])
@@ -289,7 +296,7 @@ def format_claim(p: dict) -> str:
 
 def describe_comparison(cmp: Comparison) -> str:
     a, b = theory_name(cmp.a["name"]), theory_name(cmp.b["name"])
-    lines = [f"{a} compared with {b}", f"  Result  {cmp.kind}. {KIND_MEANING[cmp.kind]}"]
+    lines = [f"{a} compared with {b}", f"  Result  {KIND_WORD[cmp.kind]}. {KIND_MEANING[cmp.kind]}"]
     for title, items in (
         ("Shared parts", cmp.shared),
         (f"Only in {a}", cmp.only_a),
@@ -299,7 +306,11 @@ def describe_comparison(cmp: Comparison) -> str:
         if items:
             lines += ["", f"  {title}", *[f"    {i}" for i in items]]
     if cmp.declaration:
-        lines += ["", "  Recorded decision", f"    {cmp.declaration['kind']}: {clean_doc(cmp.declaration['reason'])}"]
+        lines += [
+            "",
+            "  Recorded decision",
+            f"    {sentence_case(DECLARATION_WORD[cmp.declaration['kind']])}. {clean_doc(cmp.declaration['reason'])}",
+        ]
     if cmp.claims:
         lines += ["", "  Claims linking the pair", *[f"    {format_claim(p)}" for p in cmp.claims]]
     if cmp.correlation:

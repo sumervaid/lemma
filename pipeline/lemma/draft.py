@@ -21,6 +21,9 @@ CATEGORIES = {
 }
 
 
+OVERLAP_WORD = {"identity": "identical", "subtype": "nested", "partial": "partial"}
+
+
 def parse_catalog(primitives_source: str) -> list[dict]:
     """Read the vocabulary from ``Primitives.lean``, the one source of truth for parts."""
     enums = {
@@ -116,7 +119,7 @@ def explain(message: LeanMessage) -> Explained:
         return Explained(
             tone,
             f"Shares {m.group(1)} with {m.group(2).rsplit('.', 1)[0]}",
-            f"Overlap kind {kind}. Record a decision with declare_overlap, naming the source of the distinction.",
+            f"Overlap {OVERLAP_WORD.get(kind, kind)}. Record a decision with declare_overlap, naming the source of the distinction.",
             message.data,
             message.line,
         )
