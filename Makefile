@@ -12,9 +12,13 @@ endif
 PY ?= python3
 LEMMA ?= $(PY) -m lemma.cli
 
-.PHONY: help install build test test-lean test-python lint format formalize check score distinct verify report clean
+.PHONY: help setup doctor tour site install build test test-lean test-python lint format formalize check score distinct verify report clean
 
 help:
+	@echo "make setup      one-step setup: Python environment, Lean, compiled library"
+	@echo "make doctor     state what works on this machine"
+	@echo "make tour       the curated findings"
+	@echo "make site       build the Explorer at site/index.html"
 	@echo "make install    install the Python pipeline (editable) and dev tools"
 	@echo "make build      lake build (kernel, library, theories, accepted generated modules)"
 	@echo "make test       lake build LemmaTests (#guard_msgs) + pytest + ruff"
@@ -24,6 +28,18 @@ help:
 	@echo "make distinct   definitional vs empirical distinctness -> reports/distinctness.md"
 	@echo "make verify     write a review sheet for human verification"
 	@echo "make report     formalize + check + score + distinct + precision; refreshes README numbers"
+
+setup:
+	./install.sh
+
+doctor:
+	cd pipeline && $(LEMMA) --root .. doctor
+
+tour:
+	cd pipeline && $(LEMMA) --root .. tour
+
+site:
+	cd pipeline && $(LEMMA) --root .. site
 
 install:
 	$(PY) -m pip install -e pipeline[dev]

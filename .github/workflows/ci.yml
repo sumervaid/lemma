@@ -43,6 +43,9 @@ jobs:
       - name: Lint
         run: cd pipeline && ruff check . && ruff format --check .
 
+      - name: Build the Explorer
+        run: cd pipeline && python -m lemma.cli --root .. site
+
       - name: Python tests
         run: cd pipeline && python -m pytest -q
 
@@ -51,4 +54,53 @@ jobs:
           cd pipeline
           python -m lemma.cli --root .. formalize --offline
           python -m lemma.cli --root .. report --no-build
-          git -C .. diff --stat -- README.md reports/library.md || true
+          git -C .. diff --stat -- README.md reports/library.md
+          git -C .. diff --exit-code -- Lemma scripts README.md
+
+  fresh-clone-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Lean 4 from the release tarball
+        run: |
+          set -euo pipefail
+          curl -sSL -o lean.tar.zst "https://github.com/leanprover/lean4/releases/download/v4.15.0/lean-4.15.0-linux.tar.zst"
+          mkdir -p "$HOME/lean"
+          tar --zstd -xf lean.tar.zst -C "$HOME/lean" --strip-components=1
+          rm lean.tar.zst
+          echo "$HOME/lean/bin" >> "$GITHUB_PATH"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: make report with no earlier build reproduces the checked-in numbers
+        run: |
+          make install PY=python
+          make report PY=python
+          git diff --exit-code -- Lemma scripts README.md
+          test -z "$(git status --porcelain -- reports/failed Lemma)"
+
+  installer:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: One-line install from a pipe, as a new user runs the script
+        env:
+          LEMMA_REPO_URL: file://${{ github.workspace }}
+          LEMMA_HOME: ${{ runner.temp }}/lemma
+        run: bash < install.sh
+
+      - name: Commands work after install
+        run: |
+          "$HOME/.local/bin/lemma" doctor
+          "$HOME/.local/bin/lemma" tour
+          "$HOME/.local/bin/lemma" compare Exhaustion Vigor
+          "$HOME/.local/bin/lemma" new --name "ci draft" --definition "A check of the draft path" \
+            --citation "CI" --category AffectiveState --level Individual --horizon Weekly --part Energy

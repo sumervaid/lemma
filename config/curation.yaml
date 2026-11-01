@@ -1,0 +1,74 @@
+# Curated reading of the pilot library, shared by `lemma tour` and the Explorer.
+# Counts appear as {placeholders} filled from reports/library.json, so a count
+# here can never drift from the compiler. A test resolves every name below.
+
+status: >-
+  Pilot status. Curated entries are the author's readings of {papers_curated_sources} sources.
+  Pipeline entries come from hand-written fixtures, with no model run.
+  Correlations on file are placeholder or recalled values. Precision is unmeasured.
+
+findings:
+  - title: Exhaustion and vigor reduce to one part
+    body: >-
+      The library defines both from Energy at one scope, so the compiler reports identical
+      definitions. The library then records a declared distinction with a stated reason.
+    caution: The part assignment is the author's reading. The compiler reports what the definitions contain.
+    compare: [Burnout.Exhaustion, Engagement.Vigor]
+  - title: Cynicism and dedication show the same pattern
+    body: >-
+      Both read identification with work at one scope. The field debated this bipolarity for a
+      decade, while the compiler surfaces the pair at the moment of definition.
+    caution: A shared part leaves the empirical question open. Correlations on file await a source check.
+    compare: [Burnout.Cynicism, Engagement.Dedication]
+  - title: Two burnout models disagree on one path
+    body: >-
+      The sequential model asserts cynicism precedes reduced efficacy. The process model asserts
+      a null relation at the same scope and boundary.
+    caution: The reading of Leiter 1993 behind the null awaits a check against the source.
+    view: disagreements
+  - title: Challenge demands pull task performance two ways
+    body: >-
+      Composition through exhaustion implies a negative path. A direct claim in the library
+      states a positive relation, which restates the challenge-stressor paradox as a type conflict.
+    caution: An implied sign describes one mediating path, separate from any total effect.
+    view: disagreements
+  - title: "{implied_untested} implied pairs lack a direct claim in the library"
+    body: >-
+      Chaining existing claims yields pairs no library entry states. The agenda ranks them for
+      attention alongside registered claims resting on thin evidence.
+    caution: Absence from the library differs from absence from the literature. Many pairs may already have tests.
+    view: agenda
+  - title: "{formalization_failures} of {papers_pipeline_total} pipeline papers were refused"
+    body: >-
+      Each refusal names the missing piece, whether an absent part, an absent aggregation rule,
+      or a process theory lacking a measurement model.
+    caution: Hand-written fixtures produced these outcomes in order to exercise the pipeline. No model ran.
+    view: disagreements
+
+collections:
+  - title: Burnout and engagement
+    blurb: The bipolarity question, with facets side by side.
+    constructs:
+      - Burnout.Burnout
+      - Burnout.Exhaustion
+      - Burnout.Cynicism
+      - Burnout.ReducedEfficacy
+      - Engagement.Engagement
+      - Engagement.Vigor
+      - Engagement.Dedication
+      - Engagement.Absorption
+  - title: Energy across theories
+    blurb: Constructs from separate literatures resting on one part.
+    constructs:
+      - Thriving.Vitality
+      - Engagement.Vigor
+      - ShiromVigor.ShiromVigor
+      - Burnout.Exhaustion
+  - title: Demands and resources
+    blurb: Three vocabularies for strain.
+    constructs:
+      - JDR.JobDemands
+      - JDR.JobResources
+      - COR.Resources
+      - ERI.Effort
+      - ERI.Reward

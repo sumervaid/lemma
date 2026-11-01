@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "lemma-pipeline"
-version = "0.1.0"
+version = "0.2.0"
 description = "AI formalization pipeline, compiler report generator and verification-priority scorer for the Lemma type system"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -24,7 +24,7 @@ where = ["."]
 include = ["lemma*"]
 
 [tool.setuptools.package-data]
-lemma = ["prompts/*.md"]
+lemma = ["prompts/*.md", "site_assets/*"]
 
 [tool.ruff]
 line-length = 120
