@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: Please cite this software with the metadata below.
+title: "Lemma: A Type System for Organizational Theory With AI Research Loops to Allocate Verification"
+type: software
+authors:
+  - family-names: Vaid
+    given-names: Sumer
+    affiliation: Harvard Business School
+version: 0.1.0
+date-released: 2026-11-01
+repository-code: https://github.com/sumervaid/lemma
+license: Apache-2.0

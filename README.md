@@ -1,8 +1,24 @@
 # Lemma
 
+[![CI](https://github.com/sumervaid/lemma/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sumervaid/lemma/actions/workflows/ci.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
+[![Lean 4.15.0](https://img.shields.io/badge/Lean-4.15.0-blue.svg)](lean-toolchain)
+
 A type system for organizational constructs and propositions, built on Lean 4, with an AI pipeline that formalizes papers into the type system and a scorer that ranks typed propositions by how badly they need empirical verification.
 
 Sumer Vaid, Harvard Business School. Apache-2.0. Research prototype accompanying the Stage 1 proposal to the *Organization Science* special issue on AI-Enabled Frontiers in Organizational Science.
+
+## For reviewers
+
+Lean 4.15.0 with Python 3.11 or later must be on the path.
+
+```bash
+make install
+make test
+make report
+```
+
+Every pilot number in the proposal regenerates from these commands.
 
 ## What Lemma is
 
