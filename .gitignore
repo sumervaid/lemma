@@ -1,0 +1,20 @@
+# Lean
+.lake/
+*.olean
+*.ilean
+*.trace
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+
+# Local
+.env
+reports/_scratch/
+.DS_Store
