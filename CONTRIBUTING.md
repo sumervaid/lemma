@@ -4,6 +4,10 @@ Modeled on the Mathlib contribution guidelines: small, reviewed additions
 to a shared library, with conventions enforced by the compiler where the
 compiler can, and by review where it cannot.
 
+## Contributing without Lean
+
+Draft a construct in the [Explorer](https://sumervaid.github.io/lemma/#draft) or with `lemma new`, then open a [discussion](https://github.com/sumervaid/lemma/discussions/1) with the source paper. Corrections to a reading of a source are as valuable as new entries, and they need no code.
+
 ## What a contribution is
 
 - **A theory module** under `Lemma/Theories/<Theory>.lean`: the constructs a

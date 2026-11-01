@@ -1,6 +1,7 @@
 # Lemma
 
 [![CI](https://github.com/sumervaid/lemma/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sumervaid/lemma/actions/workflows/ci.yml)
+[![Explorer](https://img.shields.io/badge/Explorer-open_in_browser-0b5cad.svg)](https://sumervaid.github.io/lemma/)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 [![Lean 4.15.0](https://img.shields.io/badge/Lean-4.15.0-blue.svg)](lean-toolchain)
 
@@ -8,9 +9,25 @@ A type system for organizational constructs and propositions, built on Lean 4, w
 
 Sumer Vaid, Harvard Business School. Apache-2.0. Research prototype accompanying the Stage 1 proposal to the *Organization Science* special issue on AI-Enabled Frontiers in Organizational Science.
 
+## Start here
+
+| Goal | Route | Setup |
+|---|---|---|
+| Browse constructs, compare definitions, test an idea | [Lemma Explorer](https://sumervaid.github.io/lemma/) | None |
+| Run the compiler with no local install | [Open a Codespace](https://codespaces.new/sumervaid/lemma) | A GitHub account |
+| Run the compiler on a laptop | One line below, for macOS or Linux | About five minutes |
+| Reproduce the proposal | [For reviewers](#for-reviewers) | Lean 4.15.0 with Python 3.11 or later |
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/sumervaid/lemma/main/install.sh | bash
+lemma tour
+```
+
+[Getting started](docs/getting-started.md) walks through each route with no prior knowledge of Lean. [Reading the results](docs/reading-results.md) explains each output, with [a glossary](docs/glossary.md) and [a command list](docs/commands.md).
+
 ## For reviewers
 
-Lean 4.15.0 with Python 3.11 or later must be on the path.
+Lean 4.15.0 with Python 3.11 or later must be on the path. `make setup` installs both inside the repository.
 
 ```bash
 make install
@@ -103,6 +120,8 @@ To run the pipeline with a live model instead of fixtures, point `LEMMA_LLM_BASE
 
 ## How to add a construct or a theory
 
+Scholars without Lean can draft in the [Explorer](https://sumervaid.github.io/lemma/#draft) or with `lemma new`, then open a [discussion](https://github.com/sumervaid/lemma/discussions/1). The rest of this section is for direct contributions.
+
 One theory per module under `Lemma/Theories/`, one construct per definition, a citation docstring on every definition, and an overlap declaration for every overlap the compiler reports. `CONTRIBUTING.md` has the checklist.
 
 ```lean
@@ -172,10 +191,13 @@ Lemma/Library/       primitives and base categories
 Lemma/Theories/      pilot library, one module per theory
 Lemma/Generated/     accepted machine formalizations (pipeline output)
 LemmaTests/          #guard_msgs tests pinning compiler messages
-pipeline/            Python package `lemma` (formalize, check, score, distinct, verify)
+pipeline/            Python package `lemma`, including the Explorer and the reader commands
+install.sh           one-step setup for macOS and Linux
+docs/                guides for readers with no Lean background
 fixtures/            paper summaries, fixture formalizations, correlations.csv
 bibliography/        curated source list counted by `lemma check`
 config/scoring.yaml  scorer weights
+config/curation.yaml findings and collections shown by `lemma tour` and the Explorer
 reports/             generated reports (library, agenda, distinctness, papers, failed modules)
 verification/        human review sheets and precision
 scripts/report.lean  the Lean script that dumps the registries

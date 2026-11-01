@@ -4,6 +4,23 @@ All notable changes to the kernel, the primitive vocabulary and the
 pipeline. The kernel follows semantic versioning (`KERNEL_VERSION` in
 `Lemma/Kernel/Basic.lean`).
 
+## Pipeline 0.2.0 (unreleased)
+
+The kernel, the library, the checks and every report stay as released in 0.1.0.
+
+### Access for readers without Lean
+- Lemma Explorer: a generated, self-contained web page for browsing constructs, comparing definitions, reading disagreements and the agenda, drafting a construct, and downloading tables as CSV.
+- Commands `lemma doctor`, `tour`, `find`, `show`, `compare`, `new`, `try`, `site`. Compiler replies are explained in plain language.
+- `install.sh` for one-step setup on macOS and Linux, with a Codespaces configuration for every other platform.
+
+### Curation
+- `config/curation.yaml` holds the findings, cautions and starting collections, with counts filled from the compiler report.
+- Guides under `docs/`: getting started, reading the results, glossary, commands.
+
+### Assurance
+- Tests hold the plain-language overlap rule to every overlap the compiler reports, the browser logic to the Python logic, and a generated draft to a real compile.
+- CI runs the installer on Ubuntu and macOS.
+
 ## Kernel 0.1.0, library 0.1.0, pipeline 0.1.0 (2026-11-01)
 
 Initial release accompanying the Stage 1 proposal.
