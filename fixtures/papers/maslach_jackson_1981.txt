@@ -1,0 +1,14 @@
+TITLE: The measurement of experienced burnout
+REFERENCE: Maslach, C. & Jackson, S. E. (1981). Journal of Occupational Behaviour, 2, 99-113.
+
+DEFINITIONS
+- Burnout: a syndrome of emotional exhaustion and cynicism that occurs frequently among individuals who do people-work.
+- Emotional exhaustion: feelings of being emotionally overextended and exhausted by one's work.
+- Depersonalization: an unfeeling and impersonal response toward recipients of one's service, care or treatment.
+- Reduced personal accomplishment: a decline in one's feelings of competence and successful achievement in one's work with people.
+
+PROPOSITIONS
+1. The three subscales are distinct factors (factor analysis across samples).
+2. Burnout relates to turnover and absenteeism (correlations with intention to leave).
+
+MEASUREMENT: Maslach Burnout Inventory (MBI), self-report, frequency and intensity scales; cross-sectional samples of human-service workers; individual level.

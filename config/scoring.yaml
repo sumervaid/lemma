@@ -1,0 +1,42 @@
+# Verification-priority scorer weights (see pipeline/lemma/score.py and
+# ARCHITECTURE.md, "Scorer"). Weights are combined linearly:
+#
+#   score(p) = w_evidence * E(p) + w_structure * S(p)
+#            + w_disagreement * G(p) + w_implied * I(p)
+#
+# Every component lies in [0, 1], so the score lies in [0, 1] when the
+# weights sum to 1. Changing the weights changes the agenda, which is the
+# point: the allocation of verification is explicit and contestable.
+version: 1
+weights:
+  evidence: 0.40       # how thin the strongest attached evidence is
+  structure: 0.25      # how many theories assert or build on the proposition
+  disagreement: 0.25   # whether theories disagree about the proposition
+  implied: 0.10        # whether the proposition is implied by composition and untested
+
+# Evidence weakness E(p) by evidence kind (1 = no evidence, 0 = settled).
+evidence_weakness:
+  None: 1.0
+  Simulation: 0.9
+  CrossSectional: 0.7
+  Longitudinal: 0.4
+  Experimental: 0.2
+  MetaAnalytic: 0.1
+
+# Disagreement G(p): the strongest disagreement the proposition takes part in.
+disagreement:
+  contradiction: 1.0           # same pair, same scope and boundary, contradicting direction
+  implied_contradiction: 0.8   # a registered proposition contradicts an implied one
+  conditional: 0.6             # contradicting directions under different boundary conditions
+  shape: 0.5                   # linear versus curvilinear
+  none: 0.0
+
+# Structure S(p) = min(1, (theories_asserting + dependents) / structure_saturation).
+# theories_asserting counts theories with a comparable proposition of the same direction
+# (the proposition itself included); dependents counts implied propositions which use
+# the proposition as a premise. For an implied candidate,
+# S = min(1, (theories_joined - 1 + mediating_paths) / structure_saturation).
+structure_saturation: 8
+
+# Agenda output
+agenda_size: 25

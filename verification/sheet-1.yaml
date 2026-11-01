@@ -1,0 +1,155 @@
+instructions: For each item, read the cited passage of the source paper and set label
+  to 'faithful' (the formal statement says what the paper says), 'unfaithful' (level,
+  horizon, direction, fields or evidence kind misrepresent the paper) or 'unsure'.
+  Add notes. Precision is computed by `lemma verify --precision`.
+seed: 1
+items:
+- module: Hobfoll1989
+  kind: construct
+  name: NetLoss
+  doc: Net resource loss over the horizon (Hobfoll 1989, p. 516).
+  source_file: Lemma/Generated/Hobfoll1989.lean
+  label: ''
+  notes: ''
+- module: BakkerDemerouti2007
+  kind: proposition
+  name: demands_exhaustion_buffered
+  doc: Job resources buffer the effect of demands on exhaustion (Bakker & Demerouti
+    2007, p. 314).
+  source_file: Lemma/Generated/BakkerDemerouti2007.lean
+  label: ''
+  notes: ''
+- module: MaslachJackson1981
+  kind: proposition
+  name: exhaustion_turnover
+  doc: Burnout relates to intention to leave (Maslach & Jackson 1981, p. 108).
+  source_file: Lemma/Generated/MaslachJackson1981.lean
+  label: ''
+  notes: ''
+- module: Hobfoll1989
+  kind: construct
+  name: Resources
+  doc: 'Resources: objects, conditions, personal characteristics, energies (Hobfoll
+    1989, p. 516).'
+  source_file: Lemma/Generated/Hobfoll1989.lean
+  label: ''
+  notes: ''
+- module: Spreitzer2005
+  kind: construct
+  name: Learning
+  doc: 'Learning: acquiring and applying knowledge and skills (Spreitzer et al. 2005,
+    p. 538).'
+  source_file: Lemma/Generated/Spreitzer2005.lean
+  label: ''
+  notes: ''
+- module: Siegrist1996
+  kind: construct
+  name: Imbalance
+  doc: Effort-reward imbalance (Siegrist 1996).
+  source_file: Lemma/Generated/Siegrist1996.lean
+  label: ''
+  notes: ''
+- module: MaslachJackson1981
+  kind: construct
+  name: Depersonalization
+  doc: 'Depersonalization: an impersonal response toward recipients (Maslach & Jackson
+    1981, p. 99).'
+  source_file: Lemma/Generated/MaslachJackson1981.lean
+  label: ''
+  notes: ''
+- module: MaslachJackson1981
+  kind: construct
+  name: ReducedAccomplishment
+  doc: Reduced personal accomplishment (Maslach & Jackson 1981, p. 99).
+  source_file: Lemma/Generated/MaslachJackson1981.lean
+  label: ''
+  notes: ''
+- module: Schaufeli2002
+  kind: construct
+  name: WorkEngagement
+  doc: Work engagement as the three correlated factors (Schaufeli et al. 2002).
+  source_file: Lemma/Generated/Schaufeli2002.lean
+  label: ''
+  notes: ''
+- module: Hobfoll1989
+  kind: proposition
+  name: stress_loss
+  doc: 'Stress begets further loss: the loss spiral (Hobfoll 1989, p. 519).'
+  source_file: Lemma/Generated/Hobfoll1989.lean
+  label: ''
+  notes: ''
+- module: Siegrist1996
+  kind: construct
+  name: Overcommitment
+  doc: 'Overcommitment: excessive striving and inability to withdraw (Siegrist 1996,
+    p. 31).'
+  source_file: Lemma/Generated/Siegrist1996.lean
+  label: ''
+  notes: ''
+- module: BakkerDemerouti2007
+  kind: proposition
+  name: engagement_performance
+  doc: Engagement predicts in-role performance (Bakker & Demerouti 2007, p. 316).
+  source_file: Lemma/Generated/BakkerDemerouti2007.lean
+  label: ''
+  notes: ''
+- module: BakkerDemerouti2007
+  kind: proposition
+  name: resources_engagement
+  doc: Job resources predict engagement (Bakker & Demerouti 2007, p. 313, motivational
+    process).
+  source_file: Lemma/Generated/BakkerDemerouti2007.lean
+  label: ''
+  notes: ''
+- module: Siegrist1996
+  kind: proposition
+  name: overcommitment_strain
+  doc: Overcommitment independently raises strain (Siegrist 1996).
+  source_file: Lemma/Generated/Siegrist1996.lean
+  label: ''
+  notes: ''
+- module: BakkerDemerouti2007
+  kind: construct
+  name: JobDemands
+  doc: 'Job demands: aspects of the job requiring sustained effort; work pressure,
+    emotional demands, role conflict (Bakker & Demerouti 2007, p. 312).'
+  source_file: Lemma/Generated/BakkerDemerouti2007.lean
+  label: ''
+  notes: ''
+- module: Siegrist1996
+  kind: construct
+  name: CardiovascularStrain
+  doc: 'Cardiovascular strain: negative affect and cardiovascular symptoms (Siegrist
+    1996).'
+  source_file: Lemma/Generated/Siegrist1996.lean
+  label: ''
+  notes: ''
+- module: MaslachJackson1981
+  kind: construct
+  name: EmotionalExhaustion
+  doc: Emotional exhaustion (Maslach & Jackson 1981, p. 99).
+  source_file: Lemma/Generated/MaslachJackson1981.lean
+  label: ''
+  notes: ''
+- module: Schaufeli2002
+  kind: proposition
+  name: engagement_exhaustion
+  doc: Engagement is negatively related to exhaustion (Schaufeli et al. 2002, two-factor
+    model).
+  source_file: Lemma/Generated/Schaufeli2002.lean
+  label: ''
+  notes: ''
+- module: Siegrist1996
+  kind: proposition
+  name: imbalance_strain_overcommitted
+  doc: Overcommitment amplifies the imbalance effect (Siegrist 1996).
+  source_file: Lemma/Generated/Siegrist1996.lean
+  label: ''
+  notes: ''
+- module: Spreitzer2005
+  kind: proposition
+  name: thriving_health
+  doc: Thriving promotes health (Spreitzer et al. 2005, P8).
+  source_file: Lemma/Generated/Spreitzer2005.lean
+  label: ''
+  notes: ''

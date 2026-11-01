@@ -1,0 +1,207 @@
+# Primary sources of the curated theory library (Lemma/Theories/*.lean).
+# One entry per paper from which a construct definition or a proposition was
+# drawn. `lemma check` counts these entries as the curated source papers.
+# Entries name the module(s) which cite them. Secondary citations inside
+# docstrings (measurement papers, reviews mentioned in passing) are not listed.
+sources:
+  - id: schaufeli_2002
+    ref: "Schaufeli, W. B., Salanova, M., González-Romá, V. & Bakker, A. B. (2002). J. Happiness Stud. 3, 71-92."
+    modules: [Engagement, Burnout]
+  - id: christian_garza_slaughter_2011
+    ref: "Christian, M. S., Garza, A. S. & Slaughter, J. E. (2011). Personnel Psychology 64, 89-136."
+    modules: [Engagement, JDR]
+  - id: halbesleben_2010
+    ref: "Halbesleben, J. R. B. (2010). In Bakker & Leiter (eds.), Work Engagement, 102-117."
+    modules: [Engagement, JDR]
+  - id: maslach_jackson_1981
+    ref: "Maslach, C. & Jackson, S. E. (1981). J. Occup. Behav. 2, 99-113."
+    modules: [Burnout]
+  - id: maslach_schaufeli_leiter_2001
+    ref: "Maslach, C., Schaufeli, W. B. & Leiter, M. P. (2001). Annu. Rev. Psychol. 52, 397-422."
+    modules: [Burnout, BurnoutProcess]
+  - id: leiter_maslach_1988
+    ref: "Leiter, M. P. & Maslach, C. (1988). J. Organ. Behav. 9, 297-308."
+    modules: [Burnout]
+  - id: taris_leblanc_schaufeli_schreurs_2005
+    ref: "Taris, T. W., Le Blanc, P. M., Schaufeli, W. B. & Schreurs, P. J. G. (2005). Work & Stress 19, 238-255."
+    modules: [Burnout]
+  - id: taris_2006
+    ref: "Taris, T. W. (2006). Work & Stress 20, 316-334."
+    modules: [Burnout]
+  - id: swider_zimmerman_2010
+    ref: "Swider, B. W. & Zimmerman, R. D. (2010). J. Vocat. Behav. 76, 487-506."
+    modules: [Burnout]
+  - id: demerouti_bakker_nachreiner_schaufeli_2001
+    ref: "Demerouti, E., Bakker, A. B., Nachreiner, F. & Schaufeli, W. B. (2001). J. Appl. Psychol. 86, 499-512."
+    modules: [JDR]
+  - id: bakker_demerouti_2007
+    ref: "Bakker, A. B. & Demerouti, E. (2007). J. Manag. Psychol. 22, 309-328."
+    modules: [JDR]
+  - id: schaufeli_bakker_2004
+    ref: "Schaufeli, W. B. & Bakker, A. B. (2004). J. Organ. Behav. 25, 293-315."
+    modules: [JDR, Burnout]
+  - id: bakker_demerouti_euwema_2005
+    ref: "Bakker, A. B., Demerouti, E. & Euwema, M. C. (2005). J. Occup. Health Psychol. 10, 170-180."
+    modules: [JDR]
+  - id: bakker_hakanen_demerouti_xanthopoulou_2007
+    ref: "Bakker, A. B., Hakanen, J. J., Demerouti, E. & Xanthopoulou, D. (2007). J. Educ. Psychol. 99, 274-284."
+    modules: [JDR]
+  - id: alarcon_2011
+    ref: "Alarcon, G. M. (2011). J. Vocat. Behav. 79, 549-562."
+    modules: [JDR]
+  - id: lesener_gusy_wolter_2019
+    ref: "Lesener, T., Gusy, B. & Wolter, C. (2019). Work & Stress 33, 76-103."
+    modules: [JDR]
+  - id: lee_ashforth_1996
+    ref: "Lee, R. T. & Ashforth, B. E. (1996). J. Appl. Psychol. 81, 123-133."
+    modules: [JDR, COR]
+  - id: hakanen_schaufeli_ahola_2008
+    ref: "Hakanen, J. J., Schaufeli, W. B. & Ahola, K. (2008). Work & Stress 22, 224-241."
+    modules: [JDR]
+  - id: xanthopoulou_bakker_demerouti_schaufeli_2007
+    ref: "Xanthopoulou, D., Bakker, A. B., Demerouti, E. & Schaufeli, W. B. (2007). Int. J. Stress Manage. 14, 121-141."
+    modules: [JDR]
+  - id: xanthopoulou_bakker_demerouti_schaufeli_2009
+    ref: "Xanthopoulou, D., Bakker, A. B., Demerouti, E. & Schaufeli, W. B. (2009). J. Vocat. Behav. 74, 235-244."
+    modules: [JDR, COR]
+  - id: hakanen_perhoniemi_toppinentanner_2008
+    ref: "Hakanen, J. J., Perhoniemi, R. & Toppinen-Tanner, S. (2008). J. Vocat. Behav. 73, 78-91."
+    modules: [JDR]
+  - id: bakker_demerouti_verbeke_2004
+    ref: "Bakker, A. B., Demerouti, E. & Verbeke, W. (2004). Hum. Resour. Manage. 43, 83-104."
+    modules: [JDR]
+  - id: hobfoll_1989
+    ref: "Hobfoll, S. E. (1989). Am. Psychol. 44, 513-524."
+    modules: [COR]
+  - id: hobfoll_2001
+    ref: "Hobfoll, S. E. (2001). Appl. Psychol. 50, 337-421."
+    modules: [COR]
+  - id: hobfoll_halbesleben_neveu_westman_2018
+    ref: "Hobfoll, S. E., Halbesleben, J., Neveu, J.-P. & Westman, M. (2018). Annu. Rev. Organ. Psychol. Organ. Behav. 5, 103-128."
+    modules: [COR]
+  - id: hobfoll_freedy_1993
+    ref: "Hobfoll, S. E. & Freedy, J. (1993). In Schaufeli, Maslach & Marek (eds.), Professional Burnout, 115-129."
+    modules: [COR]
+  - id: halbesleben_2006
+    ref: "Halbesleben, J. R. B. (2006). J. Appl. Psychol. 91, 1134-1145."
+    modules: [COR]
+  - id: demerouti_bakker_bulters_2004
+    ref: "Demerouti, E., Bakker, A. B. & Bulters, A. J. (2004). J. Vocat. Behav. 64, 131-149."
+    modules: [COR]
+  - id: siegrist_1996
+    ref: "Siegrist, J. (1996). J. Occup. Health Psychol. 1, 27-41."
+    modules: [ERI]
+  - id: siegrist_et_al_2004
+    ref: "Siegrist, J. et al. (2004). Soc. Sci. Med. 58, 1483-1499."
+    modules: [ERI]
+  - id: vanvegchel_dejonge_bosma_schaufeli_2005
+    ref: "van Vegchel, N., de Jonge, J., Bosma, H. & Schaufeli, W. (2005). Soc. Sci. Med. 60, 1117-1131."
+    modules: [ERI]
+  - id: dragano_et_al_2017
+    ref: "Dragano, N. et al. (2017). Epidemiology 28, 619-626."
+    modules: [ERI]
+  - id: bakker_killmer_siegrist_schaufeli_2000
+    ref: "Bakker, A. B., Killmer, C. H., Siegrist, J. & Schaufeli, W. B. (2000). J. Adv. Nurs. 31, 884-891."
+    modules: [ERI]
+  - id: spreitzer_2005
+    ref: "Spreitzer, G., Sutcliffe, K., Dutton, J., Sonenshein, S. & Grant, A. M. (2005). Organ. Sci. 16, 537-549."
+    modules: [Thriving]
+  - id: porath_spreitzer_gibson_garnett_2012
+    ref: "Porath, C., Spreitzer, G., Gibson, C. & Garnett, F. G. (2012). J. Organ. Behav. 33, 250-275."
+    modules: [Thriving]
+  - id: kleine_rudolph_zacher_2019
+    ref: "Kleine, A.-K., Rudolph, C. W. & Zacher, H. (2019). J. Organ. Behav. 40, 973-999."
+    modules: [Thriving]
+  - id: niessen_sonnentag_sach_2012
+    ref: "Niessen, C., Sonnentag, S. & Sach, F. (2012). J. Organ. Behav. 33, 468-487."
+    modules: [Thriving]
+  - id: chan_1998
+    ref: "Chan, D. (1998). J. Appl. Psychol. 83, 234-246."
+    modules: [Thriving]
+  - id: sonnentag_fritz_2007
+    ref: "Sonnentag, S. & Fritz, C. (2007). J. Occup. Health Psychol. 12, 204-221."
+    modules: [Recovery]
+  - id: sonnentag_binnewies_mojza_2010
+    ref: "Sonnentag, S., Binnewies, C. & Mojza, E. J. (2010). J. Appl. Psychol. 95, 965-976."
+    modules: [Recovery]
+  - id: sonnentag_mojza_binnewies_scholl_2008
+    ref: "Sonnentag, S., Mojza, E. J., Binnewies, C. & Scholl, A. (2008). Work & Stress 22, 257-276."
+    modules: [Recovery]
+  - id: sonnentag_binnewies_mojza_2008
+    ref: "Sonnentag, S., Binnewies, C. & Mojza, E. J. (2008). J. Appl. Psychol. 93, 674-684."
+    modules: [Recovery]
+  - id: bakker_2014
+    ref: "Bakker, A. B. (2014). Eur. Psychol. 19, 227-236."
+    modules: [Recovery]
+  - id: bakker_2008
+    ref: "Bakker, A. B. (2008). J. Vocat. Behav. 72, 400-414."
+    modules: [Flow]
+  - id: bakker_2005
+    ref: "Bakker, A. B. (2005). J. Vocat. Behav. 66, 26-44."
+    modules: [Flow]
+  - id: csikszentmihalyi_lefevre_1989
+    ref: "Csikszentmihalyi, M. & LeFevre, J. (1989). J. Pers. Soc. Psychol. 56, 815-822."
+    modules: [Flow]
+  - id: demerouti_2006
+    ref: "Demerouti, E. (2006). J. Occup. Health Psychol. 11, 266-280."
+    modules: [Flow]
+  - id: demerouti_bakker_sonnentag_fullagar_2012
+    ref: "Demerouti, E., Bakker, A. B., Sonnentag, S. & Fullagar, C. J. (2012). J. Organ. Behav. 33, 276-295."
+    modules: [Flow]
+  - id: vallerand_et_al_2003
+    ref: "Vallerand, R. J. et al. (2003). J. Pers. Soc. Psychol. 85, 756-767."
+    modules: [Passion]
+  - id: vallerand_paquet_philippe_charest_2010
+    ref: "Vallerand, R. J., Paquet, Y., Philippe, F. L. & Charest, J. (2010). J. Pers. 78, 289-312."
+    modules: [Passion]
+  - id: forest_mageau_sarrazin_morin_2011
+    ref: "Forest, J., Mageau, G. A., Sarrazin, C. & Morin, E. M. (2011). Can. J. Adm. Sci. 28, 27-40."
+    modules: [Passion]
+  - id: schaufeli_taris_bakker_2008
+    ref: "Schaufeli, W. B., Taris, T. W. & Bakker, A. B. (2008). In Burke & Cooper (eds.), The Long Work Hours Culture, 203-226."
+    modules: [Workaholism]
+  - id: schaufeli_taris_vanrhenen_2008
+    ref: "Schaufeli, W. B., Taris, T. W. & van Rhenen, W. (2008). Appl. Psychol. 57, 173-203."
+    modules: [Workaholism]
+  - id: clark_michel_zhdanova_pui_baltes_2016
+    ref: "Clark, M. A., Michel, J. S., Zhdanova, L., Pui, S. Y. & Baltes, B. B. (2016). J. Manage. 42, 1836-1873."
+    modules: [Workaholism]
+  - id: shirom_2003
+    ref: "Shirom, A. (2003). In Ganster & Perrewé (eds.), Research in Organizational Stress and Well-being 3, 135-165."
+    modules: [ShiromVigor]
+  - id: shirom_2011
+    ref: "Shirom, A. (2011). Rev. Gen. Psychol. 15, 50-64."
+    modules: [ShiromVigor]
+  - id: shirom_toker_berliner_shapira_melamed_2008
+    ref: "Shirom, A., Toker, S., Berliner, S., Shapira, I. & Melamed, S. (2008). J. Occup. Health Psychol. 13, 319-333."
+    modules: [ShiromVigor]
+  - id: carmeli_benhador_waldman_rupp_2009
+    ref: "Carmeli, A., Ben-Hador, B., Waldman, D. A. & Rupp, D. E. (2009). J. Appl. Psychol. 94, 1553-1561."
+    modules: [ShiromVigor]
+  - id: cavanaugh_boswell_roehling_boudreau_2000
+    ref: "Cavanaugh, M. A., Boswell, W. R., Roehling, M. V. & Boudreau, J. W. (2000). J. Appl. Psychol. 85, 65-74."
+    modules: [ChallengeHindrance]
+  - id: lepine_podsakoff_lepine_2005
+    ref: "LePine, J. A., Podsakoff, N. P. & LePine, M. A. (2005). Acad. Manage. J. 48, 764-775."
+    modules: [ChallengeHindrance]
+  - id: crawford_lepine_rich_2010
+    ref: "Crawford, E. R., LePine, J. A. & Rich, B. L. (2010). J. Appl. Psychol. 95, 834-848."
+    modules: [ChallengeHindrance]
+  - id: leiter_1993
+    ref: "Leiter, M. P. (1993). In Schaufeli, Maslach & Marek (eds.), Professional Burnout, 237-250."
+    modules: [BurnoutProcess]
+  - id: janssen_2001
+    ref: "Janssen, O. (2001). Acad. Manage. J. 44, 1039-1050."
+    modules: [Activation]
+  - id: gardner_1986
+    ref: "Gardner, D. G. (1986). Acad. Manage. Rev. 11, 411-418."
+    modules: [Activation]
+  - id: bakker_vanemmerik_euwema_2006
+    ref: "Bakker, A. B., van Emmerik, H. & Euwema, M. C. (2006). Work Occup. 33, 464-489."
+    modules: [Team]
+  - id: costa_passos_bakker_2014
+    ref: "Costa, P. L., Passos, A. M. & Bakker, A. B. (2014). Eur. J. Work Organ. Psychol. 23, 414-429."
+    modules: [Team]
+  - id: torrente_salanova_llorens_schaufeli_2012
+    ref: "Torrente, P., Salanova, M., Llorens, S. & Schaufeli, W. B. (2012). Psicothema 24, 106-112."
+    modules: [Team]

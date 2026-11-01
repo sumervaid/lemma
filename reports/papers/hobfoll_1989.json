@@ -1,0 +1,76 @@
+{
+  "paper_id": "hobfoll_1989",
+  "module": "Hobfoll1989",
+  "status": "accepted",
+  "provider": "fixture",
+  "model": "hand-written fixture (no model run)",
+  "reason": "",
+  "ambiguities": [
+    "The paper is conceptual; horizon Weekly chosen to match the library.",
+    "Resource categories (objects, conditions, personal characteristics, energies) are abstract; the bundle instantiates them with the concrete kinds in the pilot vocabulary.",
+    "Loss spirals are self-loops on resource loss, which the kernel does not express as a proposition; encoded through strain."
+  ],
+  "counts": {
+    "constructs": 3,
+    "propositions": 3,
+    "aggregations": 0,
+    "temporals": 0
+  },
+  "errors": [],
+  "overlap_warnings": [
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitives Resource CareerSecurity, Resource SocialSupport with JobResources.security, JobResources.support\n  Resources.conditions ~ JobResources.security : Resource CareerSecurity at Individual / Weekly\n  Resources.support ~ JobResources.support : Resource SocialSupport at Individual / Weekly\n  overlap kind: partial (2 of 6 primitive(s) of Resources, 2 of 5 of JobResources)\n  resolve with: declare_overlap Resources distinct_from JobResources \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitives Resource Object, Resource CareerSecurity, Resource SocialSupport, Efficacy Self, Resource Time, Resource Pay with Resources.objects, Resources.security, Resources.support, Resources.efficacy, Resources.time, Resources.money\n  Resources.objects ~ Resources.objects : Resource Object at Individual / Weekly\n  Resources.conditions ~ Resources.security : Resource CareerSecurity at Individual / Weekly\n  Resources.support ~ Resources.support : Resource SocialSupport at Individual / Weekly\n  Resources.personal ~ Resources.efficacy : Efficacy Self at Individual / Weekly\n  Resources.energies ~ Resources.time : Resource Time at Individual / Weekly\n  Resources.money ~ Resources.money : Resource Pay at Individual / Weekly\n  overlap kind: subtype (every primitive of Resources is a primitive of Resources)\n  resolve with: declare_overlap Resources distinct_from Resources \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitives Resource CareerSecurity, Resource Pay with Reward.career, Reward.money\n  Resources.conditions ~ Reward.career : Resource CareerSecurity at Individual / Weekly\n  Resources.money ~ Reward.money : Resource Pay at Individual / Weekly\n  overlap kind: partial (2 of 6 primitive(s) of Resources, 2 of 3 of Reward)\n  resolve with: declare_overlap Resources distinct_from Reward \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitives Resource CareerSecurity, Resource Pay with EffortRewardImbalance ∋ Reward.career, EffortRewardImbalance ∋ Reward.money\n  Resources.conditions ~ EffortRewardImbalance ∋ Reward.career : Resource CareerSecurity at Individual / Weekly\n  Resources.money ~ EffortRewardImbalance ∋ Reward.money : Resource Pay at Individual / Weekly\n  overlap kind: partial (2 of 6 primitive(s) of Resources, 2 of 7 of EffortRewardImbalance)\n  resolve with: declare_overlap Resources distinct_from EffortRewardImbalance \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 16,
+      "column": 2,
+      "message": "shares primitives Change CareerSecurity, Change SocialSupport, Change Time, Change Pay with ResourceLoss.security, ResourceLoss.support, ResourceLoss.time, ResourceLoss.money\n  NetLoss.conditions ~ ResourceLoss.security : Change CareerSecurity at Individual / Weekly\n  NetLoss.support ~ ResourceLoss.support : Change SocialSupport at Individual / Weekly\n  NetLoss.energies ~ ResourceLoss.time : Change Time at Individual / Weekly\n  NetLoss.money ~ ResourceLoss.money : Change Pay at Individual / Weekly\n  overlap kind: subtype (every primitive of NetLoss is a primitive of ResourceLoss)\n  resolve with: declare_overlap NetLoss distinct_from ResourceLoss \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 16,
+      "column": 2,
+      "message": "shares primitives Change CareerSecurity, Change SocialSupport, Change Time, Change Pay with ResourceGain.security, ResourceGain.support, ResourceGain.time, ResourceGain.money\n  NetLoss.conditions ~ ResourceGain.security : Change CareerSecurity at Individual / Weekly\n  NetLoss.support ~ ResourceGain.support : Change SocialSupport at Individual / Weekly\n  NetLoss.energies ~ ResourceGain.time : Change Time at Individual / Weekly\n  NetLoss.money ~ ResourceGain.money : Change Pay at Individual / Weekly\n  overlap kind: subtype (every primitive of NetLoss is a primitive of ResourceGain)\n  resolve with: declare_overlap NetLoss distinct_from ResourceGain \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 23,
+      "column": 2,
+      "message": "shares primitive Symptom Psychosomatic with HealthComplaints.symptoms\n  StressReaction.symptoms ~ HealthComplaints.symptoms : Symptom Psychosomatic at Individual / Weekly\n  overlap kind: subtype (every primitive of HealthComplaints is a primitive of StressReaction)\n  resolve with: declare_overlap StressReaction distinct_from HealthComplaints \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 23,
+      "column": 2,
+      "message": "shares primitives Affect Negative High, Symptom Psychosomatic with Strain.affect, Strain.symptoms\n  StressReaction.affect ~ Strain.affect : Affect Negative High at Individual / Weekly\n  StressReaction.symptoms ~ Strain.symptoms : Symptom Psychosomatic at Individual / Weekly\n  overlap kind: identity (StressReaction and Strain reduce to the same 2 primitive(s))\n  resolve with: declare_overlap StressReaction distinct_from Strain \"reason\" (or alias_of / subtype_of)"
+    }
+  ],
+  "contradiction_warnings": [],
+  "routing_notes": [],
+  "other_messages": [],
+  "lean_path": "Lemma/Generated/Hobfoll1989.lean",
+  "repairs": 0,
+  "generated_at": "2026-11-01T18:36:55+00:00"
+}

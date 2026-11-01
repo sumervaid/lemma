@@ -1,0 +1,20 @@
+{
+  "paper_id": "weick_1995",
+  "module": "Weick1995",
+  "status": "declined",
+  "provider": "fixture",
+  "model": "hand-written fixture (no model run)",
+  "reason": "Sensemaking is defined as an ongoing process with seven properties, not as a quantity read from observations of a unit at a horizon. The book states no directional relation between measured constructs. No kernel-conformant construct or proposition can be written without inventing a measurement model the text does not supply.",
+  "ambiguities": [
+    "A measurement-model reading (for example, frequency of sensemaking episodes) would be an addition by the formalizer, not a formalization of the source."
+  ],
+  "counts": {},
+  "errors": [],
+  "overlap_warnings": [],
+  "contradiction_warnings": [],
+  "routing_notes": [],
+  "other_messages": [],
+  "lean_path": "",
+  "repairs": 0,
+  "generated_at": "2026-11-01T18:37:01+00:00"
+}

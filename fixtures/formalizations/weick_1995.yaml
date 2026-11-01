@@ -1,0 +1,9 @@
+model: hand-written fixture (no model run)
+declined: true
+reason: >-
+  Sensemaking is defined as an ongoing process with seven properties, not as a quantity
+  read from observations of a unit at a horizon. The book states no directional relation
+  between measured constructs. No kernel-conformant construct or proposition can be
+  written without inventing a measurement model the text does not supply.
+ambiguities:
+  - "A measurement-model reading (for example, frequency of sensemaking episodes) would be an addition by the formalizer, not a formalization of the source."

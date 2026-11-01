@@ -1,0 +1,137 @@
+{
+  "paper_id": "spreitzer_2005",
+  "module": "Spreitzer2005",
+  "status": "accepted",
+  "provider": "fixture",
+  "model": "hand-written fixture (no model run)",
+  "reason": "",
+  "ambiguities": [
+    "The paper is conceptual and names no horizon; Weekly chosen so that the propositions compose with the library's engagement and burnout constructs.",
+    "Propositions 4-6 relate unit features to individual behaviors; the kernel has no top-down relation, so the pipeline states them over the library's unit-level aggregate of agentic behaviors.",
+    "P7 (development) has no construct in the library vocabulary and is omitted."
+  ],
+  "counts": {
+    "constructs": 3,
+    "propositions": 3,
+    "aggregations": 0,
+    "temporals": 0
+  },
+  "errors": [],
+  "overlap_warnings": [
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Vigor.energy\n  Vitality.energy ~ Vigor.energy : Energy at Individual / Weekly\n  overlap kind: identity (Vitality and Vigor reduce to the same 1 primitive(s))\n  resolve with: declare_overlap Vitality distinct_from Vigor \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Engagement.vigor\n  Vitality.energy ~ Engagement.vigor : Energy at Individual / Weekly\n  overlap kind: subtype (every primitive of Vitality is a primitive of Engagement)\n  resolve with: declare_overlap Vitality distinct_from Engagement \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Exhaustion.energy\n  Vitality.energy ~ Exhaustion.energy : Energy at Individual / Weekly\n  overlap kind: identity (Vitality and Exhaustion reduce to the same 1 primitive(s))\n  resolve with: declare_overlap Vitality distinct_from Exhaustion \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Burnout ∋ Exhaustion.energy\n  Vitality.energy ~ Burnout ∋ Exhaustion.energy : Energy at Individual / Weekly\n  overlap kind: subtype (every primitive of Vitality is a primitive of Burnout)\n  resolve with: declare_overlap Vitality distinct_from Burnout \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Vitality.energy\n  Vitality.energy ~ Vitality.energy : Energy at Individual / Weekly\n  overlap kind: identity (Vitality and Vitality reduce to the same 1 primitive(s))\n  resolve with: declare_overlap Vitality distinct_from Vitality \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Thriving ∋ Vitality.energy\n  Vitality.energy ~ Thriving ∋ Vitality.energy : Energy at Individual / Weekly\n  overlap kind: subtype (every primitive of Vitality is a primitive of Thriving)\n  resolve with: declare_overlap Vitality distinct_from Thriving \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with ShiromVigor.physicalStrength\n  Vitality.energy ~ ShiromVigor.physicalStrength : Energy at Individual / Weekly\n  overlap kind: subtype (every primitive of Vitality is a primitive of ShiromVigor)\n  resolve with: declare_overlap Vitality distinct_from ShiromVigor \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 11,
+      "column": 2,
+      "message": "shares primitive Learning with LearningAtWork.learning\n  Learning.learning ~ LearningAtWork.learning : Learning at Individual / Weekly\n  overlap kind: identity (Learning and LearningAtWork reduce to the same 1 primitive(s))\n  resolve with: declare_overlap Learning distinct_from LearningAtWork \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 11,
+      "column": 2,
+      "message": "shares primitive Learning with Thriving ∋ LearningAtWork.learning\n  Learning.learning ~ Thriving ∋ LearningAtWork.learning : Learning at Individual / Weekly\n  overlap kind: subtype (every primitive of Learning is a primitive of Thriving)\n  resolve with: declare_overlap Learning distinct_from Thriving \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitive Energy with Vigor.energy\n  Thriving ∋ Vitality.energy ~ Vigor.energy : Energy at Individual / Weekly\n  overlap kind: subtype (every primitive of Vigor is a primitive of Thriving)\n  resolve with: declare_overlap Thriving distinct_from Vigor \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitive Energy with Engagement.vigor\n  Thriving ∋ Vitality.energy ~ Engagement.vigor : Energy at Individual / Weekly\n  overlap kind: partial (1 of 2 primitive(s) of Thriving, 1 of 3 of Engagement)\n  resolve with: declare_overlap Thriving distinct_from Engagement \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitive Energy with Exhaustion.energy\n  Thriving ∋ Vitality.energy ~ Exhaustion.energy : Energy at Individual / Weekly\n  overlap kind: subtype (every primitive of Exhaustion is a primitive of Thriving)\n  resolve with: declare_overlap Thriving distinct_from Exhaustion \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitive Energy with Burnout ∋ Exhaustion.energy\n  Thriving ∋ Vitality.energy ~ Burnout ∋ Exhaustion.energy : Energy at Individual / Weekly\n  overlap kind: partial (1 of 2 primitive(s) of Thriving, 1 of 3 of Burnout)\n  resolve with: declare_overlap Thriving distinct_from Burnout \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitive Energy with Vitality.energy\n  Thriving ∋ Vitality.energy ~ Vitality.energy : Energy at Individual / Weekly\n  overlap kind: subtype (every primitive of Vitality is a primitive of Thriving)\n  resolve with: declare_overlap Thriving distinct_from Vitality \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitive Learning with LearningAtWork.learning\n  Thriving ∋ Learning.learning ~ LearningAtWork.learning : Learning at Individual / Weekly\n  overlap kind: subtype (every primitive of LearningAtWork is a primitive of Thriving)\n  resolve with: declare_overlap Thriving distinct_from LearningAtWork \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitives Energy, Learning with Thriving ∋ Vitality.energy, Thriving ∋ LearningAtWork.learning\n  Thriving ∋ Vitality.energy ~ Thriving ∋ Vitality.energy : Energy at Individual / Weekly\n  Thriving ∋ Learning.learning ~ Thriving ∋ LearningAtWork.learning : Learning at Individual / Weekly\n  overlap kind: identity (Thriving and Thriving reduce to the same 2 primitive(s))\n  resolve with: declare_overlap Thriving distinct_from Thriving \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitive Energy with ShiromVigor.physicalStrength\n  Thriving ∋ Vitality.energy ~ ShiromVigor.physicalStrength : Energy at Individual / Weekly\n  overlap kind: partial (1 of 2 primitive(s) of Thriving, 1 of 2 of ShiromVigor)\n  resolve with: declare_overlap Thriving distinct_from ShiromVigor \"reason\" (or alias_of / subtype_of)"
+    }
+  ],
+  "contradiction_warnings": [],
+  "routing_notes": [
+    {
+      "severity": "information",
+      "line": 23,
+      "column": 2,
+      "message": "`discretion_agentic` is routed through agenticUnitMean"
+    }
+  ],
+  "other_messages": [],
+  "lean_path": "Lemma/Generated/Spreitzer2005.lean",
+  "repairs": 0,
+  "generated_at": "2026-11-01T18:37:00+00:00"
+}

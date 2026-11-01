@@ -1,0 +1,10 @@
+TITLE: Sensemaking in Organizations
+REFERENCE: Weick, K. E. (1995). Sage.
+
+DEFINITIONS
+- Sensemaking: an ongoing, retrospective, social process grounded in identity construction, enactive of sensible environments, focused on and by extracted cues, driven by plausibility rather than accuracy (seven properties, chapter 2).
+
+PROPOSITIONS
+The book advances no directional propositions between measured constructs. It describes properties of a process and illustrates them with cases (the Mann Gulch fire, Union Carbide Bhopal).
+
+MEASUREMENT: none proposed; the work is interpretive.

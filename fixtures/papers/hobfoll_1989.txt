@@ -1,0 +1,14 @@
+TITLE: Conservation of resources: a new attempt at conceptualizing stress
+REFERENCE: Hobfoll, S. E. (1989). American Psychologist, 44(3), 513-524.
+
+DEFINITIONS
+- Resources: objects, personal characteristics, conditions, or energies that are valued by the individual or that serve as a means for attainment of other valued resources (p. 516).
+- Resource loss: actual loss of resources; threat of loss; and lack of gain following investment of resources.
+- Psychological stress: a reaction to the environment in which there is threat of net loss, actual net loss, or lack of resource gain following investment.
+
+PROPOSITIONS
+1. Resource loss produces psychological stress (strain). Loss is more salient than gain.
+2. People invest resources to protect against loss, recover from loss and gain resources; those with more resources are less vulnerable to loss and more capable of gain.
+3. Loss begets further loss (loss spirals); gain begets further gain (gain spirals).
+
+MEASUREMENT: the paper is conceptual; it reviews studies of stressful life events and proposes a resource-based measurement approach at the individual level.

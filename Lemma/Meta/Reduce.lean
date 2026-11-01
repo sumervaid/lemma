@@ -142,7 +142,9 @@ private partial def collect (e : Expr) (path : List Name) (via : Option Name)
       for leaf in ce.leaves do
         let leaf' : PrimLeaf := { leaf with path := path ++ leaf.path, via := via <|> some n }
         modify fun a => { a with leaves := a.leaves.push leaf' }
-    else if isStructure env n then
+    else if isStructure env n && (n == ``Prod || (← declaredScopeOf e).isSome) then
+      -- Only products and structures descending from `Construct` are unfolded.
+      -- Any other structure is an undefined term from the kernel's point of view.
       let scope' := (← declaredScopeOf e) <|> scope
       for f in getStructureFields env n do
         let ft ← fieldTypeOf e n f
@@ -157,7 +159,7 @@ private partial def collect (e : Expr) (path : List Name) (via : Option Name)
       match env.find? n with
       | some (.axiomInfo _) => fail path e s!"`{n}` is an axiom: the construct rests on an undefined term"
       | some (.opaqueInfo _) => fail path e s!"`{n}` is opaque: the construct rests on an undefined term"
-      | _ => fail path e s!"`{shortName n}` is neither a registered primitive, a registered construct, nor a structure"
+      | _ => fail path e s!"`{shortName n}` is neither a registered primitive, a registered construct, a product, nor a structure extending `Construct`: the construct rests on an undefined term"
 
 /-- Reduce the construct type named `declName` to primitive leaves. -/
 def reduceConstruct (declName : Name) : MetaM ReduceResult := do

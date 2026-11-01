@@ -1,0 +1,17 @@
+TITLE: A socially embedded model of thriving at work
+REFERENCE: Spreitzer, G., Sutcliffe, K., Dutton, J., Sonenshein, S. & Grant, A. M. (2005). Organization Science, 16(5), 537-549.
+
+DEFINITIONS
+- Thriving: the psychological state in which individuals experience both a sense of vitality and a sense of learning at work (p. 538).
+- Vitality: the positive feeling of having energy available (p. 539).
+- Learning: the sense that one is acquiring, and can apply, knowledge and skills (p. 538).
+- Agentic work behaviors: task focus, exploration, heedful relating (pp. 540-542).
+- Unit contextual features: decision-making discretion, broad information sharing, climate of trust and respect (pp. 542-543).
+
+PROPOSITIONS (theoretical, no data)
+P1-P3. Task focus, exploration and heedful relating each promote thriving.
+P4-P6. Decision-making discretion, broad information sharing and a climate of trust and respect each promote agentic work behaviors.
+P7. Thriving promotes individual development.
+P8. Thriving promotes health.
+
+LEVEL: individual thriving embedded in a work unit; the paper is conceptual and proposes no horizon.

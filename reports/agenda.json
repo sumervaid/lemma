@@ -1,0 +1,4555 @@
+{
+  "config": {
+    "version": 1,
+    "weights": {
+      "evidence": 0.4,
+      "structure": 0.25,
+      "disagreement": 0.25,
+      "implied": 0.1
+    },
+    "evidence_weakness": {
+      "None": 1.0,
+      "Simulation": 0.9,
+      "CrossSectional": 0.7,
+      "Longitudinal": 0.4,
+      "Experimental": 0.2,
+      "MetaAnalytic": 0.1
+    },
+    "disagreement": {
+      "contradiction": 1.0,
+      "implied_contradiction": 0.8,
+      "conditional": 0.6,
+      "shape": 0.5,
+      "none": 0.0
+    },
+    "structure_saturation": 8,
+    "agenda_size": 25
+  },
+  "items": [
+    {
+      "name": "implied:HarmoniousPassion->TaskPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "Passion.HarmoniousPassion",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion",
+        "Burnout",
+        "Engagement",
+        "BakkerDemerouti2007"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.75,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.6875,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Passion, Burnout, Engagement, BakkerDemerouti2007 along 3 paths (S=0.75): harmonious_exhaustion ∘ exhaustion_task_performance; harmonious_engagement ∘ engagement_task_performance; harmonious_engagement ∘ engagement_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobDemands->Cynicism:Positive",
+      "kind": "implied",
+      "antecedent": "JDR.JobDemands",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.75,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.6875,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR, Burnout, BurnoutProcess along 4 paths (S=0.75): demands_exhaustion ∘ exhaustion_cynicism; demands_exhaustion ∘ exhaustion_cynicism; demands_exhaustion ∘ exhaustion_cynicism; demands_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobResources->TaskPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "JDR.JobResources",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR",
+        "Engagement",
+        "BakkerDemerouti2007",
+        "Burnout"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.75,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.6875,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR, Engagement, BakkerDemerouti2007, Burnout along 3 paths (S=0.75): resources_engagement ∘ engagement_task_performance; resources_engagement ∘ engagement_performance; resources_exhaustion ∘ exhaustion_task_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ChallengeDemands->Cynicism:Positive",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.ChallengeDemands",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, Burnout, BurnoutProcess along 2 paths (S=0.50): challenge_exhaustion ∘ exhaustion_cynicism; challenge_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Detachment->Cynicism:Negative",
+      "kind": "implied",
+      "antecedent": "Recovery.Detachment",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Recovery",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Recovery, Burnout, BurnoutProcess along 2 paths (S=0.50): detachment_exhaustion ∘ exhaustion_cynicism; detachment_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:EffortRewardImbalance->Cynicism:Positive",
+      "kind": "implied",
+      "antecedent": "ERI.EffortRewardImbalance",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ERI, Burnout, BurnoutProcess along 2 paths (S=0.50): imbalance_exhaustion ∘ exhaustion_cynicism; imbalance_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HarmoniousPassion->Cynicism:Negative",
+      "kind": "implied",
+      "antecedent": "Passion.HarmoniousPassion",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Passion, Burnout, BurnoutProcess along 2 paths (S=0.50): harmonious_exhaustion ∘ exhaustion_cynicism; harmonious_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HindranceDemands->Cynicism:Positive",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.HindranceDemands",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, Burnout, BurnoutProcess along 2 paths (S=0.50): hindrance_exhaustion ∘ exhaustion_cynicism; hindrance_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobDemands->Cynicism:Positive",
+      "kind": "implied",
+      "antecedent": "BakkerDemerouti2007.JobDemands",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BakkerDemerouti2007",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from BakkerDemerouti2007, Burnout, BurnoutProcess along 2 paths (S=0.50): demands_exhaustion ∘ exhaustion_cynicism; demands_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobResources->Cynicism:Negative",
+      "kind": "implied",
+      "antecedent": "JDR.JobResources",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR, Burnout, BurnoutProcess along 2 paths (S=0.50): resources_exhaustion ∘ exhaustion_cynicism; resources_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ObsessivePassion->Cynicism:Positive",
+      "kind": "implied",
+      "antecedent": "Passion.ObsessivePassion",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Passion, Burnout, BurnoutProcess along 2 paths (S=0.50): obsessive_exhaustion ∘ exhaustion_cynicism; obsessive_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:PersonalResources->TaskPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "JDR.PersonalResources",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR",
+        "Engagement",
+        "BakkerDemerouti2007"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR, Engagement, BakkerDemerouti2007 along 2 paths (S=0.50): personal_resources_engagement ∘ engagement_task_performance; personal_resources_engagement ∘ engagement_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ResourceGain->TaskPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "COR.ResourceGain",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR",
+        "Engagement",
+        "BakkerDemerouti2007"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR, Engagement, BakkerDemerouti2007 along 2 paths (S=0.50): gain_engagement ∘ engagement_task_performance; gain_engagement ∘ engagement_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ResourceLoss->Cynicism:Positive",
+      "kind": "implied",
+      "antecedent": "COR.ResourceLoss",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR, Burnout, BurnoutProcess along 2 paths (S=0.50): loss_exhaustion ∘ exhaustion_cynicism; loss_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:WorkEngagement->Cynicism:Negative",
+      "kind": "implied",
+      "antecedent": "Schaufeli2002.WorkEngagement",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Schaufeli2002",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Schaufeli2002, Burnout, BurnoutProcess along 2 paths (S=0.50): engagement_exhaustion ∘ exhaustion_cynicism; engagement_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Workaholism->Cynicism:Positive",
+      "kind": "implied",
+      "antecedent": "Workaholism.Workaholism",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Workaholism",
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Workaholism, Burnout, BurnoutProcess along 2 paths (S=0.50): workaholism_exhaustion ∘ exhaustion_cynicism; workaholism_exhaustion ∘ exhaustion_cynicism"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:WorkingExcessively->TaskPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "Workaholism.WorkingExcessively",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Workaholism",
+        "Engagement",
+        "BakkerDemerouti2007"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Workaholism, Engagement, BakkerDemerouti2007 along 2 paths (S=0.50): excessive_engagement ∘ engagement_task_performance; excessive_engagement ∘ engagement_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "cynicism_reduced_efficacy",
+      "kind": "registered",
+      "antecedent": "Burnout.Cynicism",
+      "consequent": "Burnout.ReducedEfficacy",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Burnout"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.375,
+      "disagreement": 1.0,
+      "disagreement_kind": "contradiction",
+      "implied_untested": 0.0,
+      "score": 0.6238,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Burnout) (E=0.70)",
+        "1 theory assert it, 2 implied propositions depend on it (S=0.38)",
+        "disagreement: contradiction (G=1.00)"
+      ],
+      "members": [
+        "cynicism_reduced_efficacy"
+      ]
+    },
+    {
+      "name": "implied:AgenticBehaviors->HealthComplaints:Negative",
+      "kind": "implied",
+      "antecedent": "Thriving.AgenticBehaviors",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Thriving",
+        "Spreitzer2005"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.375,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5938,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Thriving, Spreitzer2005 along 2 paths (S=0.38): agentic_thriving ∘ thriving_health; agentic_thriving ∘ thriving_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Exhaustion->ReducedEfficacy:Positive",
+      "kind": "implied",
+      "antecedent": "Burnout.Exhaustion",
+      "consequent": "Burnout.ReducedEfficacy",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.375,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5938,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Burnout, BurnoutProcess along 2 paths (S=0.38): exhaustion_cynicism ∘ cynicism_reduced_efficacy; exhaustion_cynicism ∘ cynicism_reduced_efficacy"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobDemands->HealthComplaints:Positive",
+      "kind": "implied",
+      "antecedent": "JDR.JobDemands",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.375,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5938,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR, BurnoutProcess along 2 paths (S=0.38): demands_exhaustion ∘ exhaustion_health; demands_exhaustion ∘ exhaustion_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobResources->TaskPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "BakkerDemerouti2007.JobResources",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BakkerDemerouti2007",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.375,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5938,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from BakkerDemerouti2007, Engagement along 2 paths (S=0.38): resources_engagement ∘ engagement_task_performance; resources_engagement ∘ engagement_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ChallengeDemands->ContextualPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.ChallengeDemands",
+      "consequent": "Engagement.ContextualPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, Engagement along 1 path (S=0.25): challenge_engagement ∘ engagement_contextual_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ChallengeDemands->HealthComplaints:Positive",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.ChallengeDemands",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, JDR along 1 path (S=0.25): challenge_exhaustion ∘ exhaustion_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ChallengeDemands->JobResources:Positive",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.ChallengeDemands",
+      "consequent": "JDR.JobResources",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, JDR along 1 path (S=0.25): challenge_engagement ∘ engagement_resources"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ChallengeDemands->OrganizationalCommitment:Positive",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.ChallengeDemands",
+      "consequent": "JDR.OrganizationalCommitment",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, JDR along 1 path (S=0.25): challenge_engagement ∘ engagement_commitment"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ChallengeDemands->TurnoverIntention:Negative",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.ChallengeDemands",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, Engagement along 1 path (S=0.25): challenge_engagement ∘ engagement_turnover"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Detachment->HealthComplaints:Negative",
+      "kind": "implied",
+      "antecedent": "Recovery.Detachment",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Recovery",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Recovery, JDR along 1 path (S=0.25): detachment_exhaustion ∘ exhaustion_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Detachment->TaskPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "Recovery.Detachment",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Recovery",
+        "Burnout"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Recovery, Burnout along 1 path (S=0.25): detachment_exhaustion ∘ exhaustion_task_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Effort->ResourceLoss:Positive",
+      "kind": "implied",
+      "antecedent": "ERI.Effort",
+      "consequent": "COR.ResourceLoss",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI",
+        "COR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ERI, COR along 1 path (S=0.25): effort_strain ∘ strain_loss"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:EffortRewardImbalance->HealthComplaints:Positive",
+      "kind": "implied",
+      "antecedent": "ERI.EffortRewardImbalance",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ERI, JDR along 1 path (S=0.25): imbalance_exhaustion ∘ exhaustion_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:EffortRewardImbalance->ResourceLoss:Positive",
+      "kind": "implied",
+      "antecedent": "ERI.EffortRewardImbalance",
+      "consequent": "COR.ResourceLoss",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI",
+        "COR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ERI, COR along 1 path (S=0.25): imbalance_strain ∘ strain_loss"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:EffortRewardImbalance->TaskPerformance:Negative",
+      "kind": "implied",
+      "antecedent": "ERI.EffortRewardImbalance",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI",
+        "Burnout"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ERI, Burnout along 1 path (S=0.25): imbalance_exhaustion ∘ exhaustion_task_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Engagement->Flow:Positive",
+      "kind": "implied",
+      "antecedent": "Engagement.Engagement",
+      "consequent": "Flow.Flow",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR",
+        "Flow"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR, Flow along 1 path (S=0.25): engagement_resources ∘ resources_flow"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Engagement->ReducedEfficacy:Negative",
+      "kind": "implied",
+      "antecedent": "Engagement.Engagement",
+      "consequent": "Burnout.ReducedEfficacy",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR",
+        "BurnoutProcess"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR, BurnoutProcess along 1 path (S=0.25): engagement_resources ∘ resources_reduced_efficacy"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HarmoniousPassion->ContextualPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "Passion.HarmoniousPassion",
+      "consequent": "Engagement.ContextualPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Passion, Engagement along 1 path (S=0.25): harmonious_engagement ∘ engagement_contextual_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HarmoniousPassion->HealthComplaints:Negative",
+      "kind": "implied",
+      "antecedent": "Passion.HarmoniousPassion",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Passion, JDR along 1 path (S=0.25): harmonious_exhaustion ∘ exhaustion_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HarmoniousPassion->JobResources:Positive",
+      "kind": "implied",
+      "antecedent": "Passion.HarmoniousPassion",
+      "consequent": "JDR.JobResources",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Passion, JDR along 1 path (S=0.25): harmonious_engagement ∘ engagement_resources"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HarmoniousPassion->OrganizationalCommitment:Positive",
+      "kind": "implied",
+      "antecedent": "Passion.HarmoniousPassion",
+      "consequent": "JDR.OrganizationalCommitment",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Passion, JDR along 1 path (S=0.25): harmonious_engagement ∘ engagement_commitment"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HarmoniousPassion->TurnoverIntention:Negative",
+      "kind": "implied",
+      "antecedent": "Passion.HarmoniousPassion",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Passion, Engagement along 1 path (S=0.25): harmonious_engagement ∘ engagement_turnover"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HindranceDemands->ContextualPerformance:Negative",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.HindranceDemands",
+      "consequent": "Engagement.ContextualPerformance",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, Engagement along 1 path (S=0.25): hindrance_engagement ∘ engagement_contextual_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HindranceDemands->HealthComplaints:Positive",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.HindranceDemands",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, JDR along 1 path (S=0.25): hindrance_exhaustion ∘ exhaustion_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HindranceDemands->JobResources:Negative",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.HindranceDemands",
+      "consequent": "JDR.JobResources",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, JDR along 1 path (S=0.25): hindrance_engagement ∘ engagement_resources"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HindranceDemands->OrganizationalCommitment:Negative",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.HindranceDemands",
+      "consequent": "JDR.OrganizationalCommitment",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, JDR along 1 path (S=0.25): hindrance_engagement ∘ engagement_commitment"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:HindranceDemands->TurnoverIntention:Positive",
+      "kind": "implied",
+      "antecedent": "ChallengeHindrance.HindranceDemands",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ChallengeHindrance, Engagement along 1 path (S=0.25): hindrance_engagement ∘ engagement_turnover"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobDemands->HealthComplaints:Positive",
+      "kind": "implied",
+      "antecedent": "BakkerDemerouti2007.JobDemands",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BakkerDemerouti2007",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from BakkerDemerouti2007, JDR along 1 path (S=0.25): demands_exhaustion ∘ exhaustion_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobDemands->TaskPerformance:Negative",
+      "kind": "implied",
+      "antecedent": "BakkerDemerouti2007.JobDemands",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BakkerDemerouti2007",
+        "Burnout"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from BakkerDemerouti2007, Burnout along 1 path (S=0.25): demands_exhaustion ∘ exhaustion_task_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobResources->ContextualPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "BakkerDemerouti2007.JobResources",
+      "consequent": "Engagement.ContextualPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BakkerDemerouti2007",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from BakkerDemerouti2007, Engagement along 1 path (S=0.25): resources_engagement ∘ engagement_contextual_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobResources->ContextualPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "JDR.JobResources",
+      "consequent": "Engagement.ContextualPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR, Engagement along 1 path (S=0.25): resources_engagement ∘ engagement_contextual_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobResources->JobResources:Positive",
+      "kind": "implied",
+      "antecedent": "BakkerDemerouti2007.JobResources",
+      "consequent": "JDR.JobResources",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BakkerDemerouti2007",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from BakkerDemerouti2007, JDR along 1 path (S=0.25): resources_engagement ∘ engagement_resources"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobResources->OrganizationalCommitment:Positive",
+      "kind": "implied",
+      "antecedent": "BakkerDemerouti2007.JobResources",
+      "consequent": "JDR.OrganizationalCommitment",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BakkerDemerouti2007",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from BakkerDemerouti2007, JDR along 1 path (S=0.25): resources_engagement ∘ engagement_commitment"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobResources->TurnoverIntention:Negative",
+      "kind": "implied",
+      "antecedent": "BakkerDemerouti2007.JobResources",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BakkerDemerouti2007",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from BakkerDemerouti2007, Engagement along 1 path (S=0.25): resources_engagement ∘ engagement_turnover"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobResources->TurnoverIntention:Negative",
+      "kind": "implied",
+      "antecedent": "JDR.JobResources",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR, Engagement along 1 path (S=0.25): resources_engagement ∘ engagement_turnover"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ObsessivePassion->HealthComplaints:Positive",
+      "kind": "implied",
+      "antecedent": "Passion.ObsessivePassion",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Passion, JDR along 1 path (S=0.25): obsessive_exhaustion ∘ exhaustion_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ObsessivePassion->TaskPerformance:Negative",
+      "kind": "implied",
+      "antecedent": "Passion.ObsessivePassion",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion",
+        "Burnout"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Passion, Burnout along 1 path (S=0.25): obsessive_exhaustion ∘ exhaustion_task_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Overcommitment->ResourceLoss:Positive",
+      "kind": "implied",
+      "antecedent": "ERI.Overcommitment",
+      "consequent": "COR.ResourceLoss",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI",
+        "COR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ERI, COR along 1 path (S=0.25): overcommitment_strain ∘ strain_loss"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:PersonalResources->ContextualPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "JDR.PersonalResources",
+      "consequent": "Engagement.ContextualPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR, Engagement along 1 path (S=0.25): personal_resources_engagement ∘ engagement_contextual_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:PersonalResources->TurnoverIntention:Negative",
+      "kind": "implied",
+      "antecedent": "JDR.PersonalResources",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR, Engagement along 1 path (S=0.25): personal_resources_engagement ∘ engagement_turnover"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ResourceGain->ContextualPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "COR.ResourceGain",
+      "consequent": "Engagement.ContextualPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR, Engagement along 1 path (S=0.25): gain_engagement ∘ engagement_contextual_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ResourceGain->JobResources:Positive",
+      "kind": "implied",
+      "antecedent": "COR.ResourceGain",
+      "consequent": "JDR.JobResources",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR, JDR along 1 path (S=0.25): gain_engagement ∘ engagement_resources"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ResourceGain->OrganizationalCommitment:Positive",
+      "kind": "implied",
+      "antecedent": "COR.ResourceGain",
+      "consequent": "JDR.OrganizationalCommitment",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR, JDR along 1 path (S=0.25): gain_engagement ∘ engagement_commitment"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ResourceGain->TurnoverIntention:Negative",
+      "kind": "implied",
+      "antecedent": "COR.ResourceGain",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR, Engagement along 1 path (S=0.25): gain_engagement ∘ engagement_turnover"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ResourceLoss->HealthComplaints:Positive",
+      "kind": "implied",
+      "antecedent": "COR.ResourceLoss",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR, JDR along 1 path (S=0.25): loss_exhaustion ∘ exhaustion_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ResourceLoss->TaskPerformance:Negative",
+      "kind": "implied",
+      "antecedent": "COR.ResourceLoss",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR",
+        "Burnout"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR, Burnout along 1 path (S=0.25): loss_exhaustion ∘ exhaustion_task_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Reward->ResourceLoss:Negative",
+      "kind": "implied",
+      "antecedent": "ERI.Reward",
+      "consequent": "COR.ResourceLoss",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI",
+        "COR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from ERI, COR along 1 path (S=0.25): reward_strain ∘ strain_loss"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Thriving->TurnoverIntention:Negative",
+      "kind": "implied",
+      "antecedent": "Thriving.Thriving",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Thriving",
+        "Burnout"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Thriving, Burnout along 1 path (S=0.25): thriving_burnout ∘ burnout_turnover"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:WorkEngagement->HealthComplaints:Negative",
+      "kind": "implied",
+      "antecedent": "Schaufeli2002.WorkEngagement",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Schaufeli2002",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Schaufeli2002, JDR along 1 path (S=0.25): engagement_exhaustion ∘ exhaustion_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:WorkEngagement->TaskPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "Schaufeli2002.WorkEngagement",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Schaufeli2002",
+        "Burnout"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Schaufeli2002, Burnout along 1 path (S=0.25): engagement_exhaustion ∘ exhaustion_task_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Workaholism->TaskPerformance:Negative",
+      "kind": "implied",
+      "antecedent": "Workaholism.Workaholism",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Workaholism",
+        "Burnout"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Workaholism, Burnout along 1 path (S=0.25): workaholism_exhaustion ∘ exhaustion_task_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:WorkingExcessively->ContextualPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "Workaholism.WorkingExcessively",
+      "consequent": "Engagement.ContextualPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Workaholism",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Workaholism, Engagement along 1 path (S=0.25): excessive_engagement ∘ engagement_contextual_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:WorkingExcessively->JobResources:Positive",
+      "kind": "implied",
+      "antecedent": "Workaholism.WorkingExcessively",
+      "consequent": "JDR.JobResources",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Workaholism",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Workaholism, JDR along 1 path (S=0.25): excessive_engagement ∘ engagement_resources"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:WorkingExcessively->OrganizationalCommitment:Positive",
+      "kind": "implied",
+      "antecedent": "Workaholism.WorkingExcessively",
+      "consequent": "JDR.OrganizationalCommitment",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Workaholism",
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Workaholism, JDR along 1 path (S=0.25): excessive_engagement ∘ engagement_commitment"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:WorkingExcessively->TurnoverIntention:Negative",
+      "kind": "implied",
+      "antecedent": "Workaholism.WorkingExcessively",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Workaholism",
+        "Engagement"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5625,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Workaholism, Engagement along 1 path (S=0.25): excessive_engagement ∘ engagement_turnover"
+      ],
+      "members": []
+    },
+    {
+      "name": "cynicism_reduced_efficacy",
+      "kind": "registered",
+      "antecedent": "Burnout.Cynicism",
+      "consequent": "Burnout.ReducedEfficacy",
+      "direction": "Null",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BurnoutProcess"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 1.0,
+      "disagreement_kind": "contradiction",
+      "implied_untested": 0.0,
+      "score": 0.5613,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (BurnoutProcess) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)",
+        "disagreement: contradiction (G=1.00)"
+      ],
+      "members": [
+        "cynicism_reduced_efficacy"
+      ]
+    },
+    {
+      "name": "implied:AgenticBehaviors->Burnout:Negative",
+      "kind": "implied",
+      "antecedent": "Thriving.AgenticBehaviors",
+      "consequent": "Burnout.Burnout",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Thriving"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Thriving along 1 path (S=0.12): agentic_thriving ∘ thriving_burnout"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:AgenticBehaviors->TaskPerformance:Positive",
+      "kind": "implied",
+      "antecedent": "Thriving.AgenticBehaviors",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Thriving"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Thriving along 1 path (S=0.12): agentic_thriving ∘ thriving_task_performance"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Engagement->Exhaustion:Negative",
+      "kind": "implied",
+      "antecedent": "Engagement.Engagement",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR along 1 path (S=0.12): engagement_resources ∘ resources_exhaustion"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobDemands->Strain:Positive",
+      "kind": "implied",
+      "antecedent": "JDR.JobDemands",
+      "consequent": "COR.Strain",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR along 1 path (S=0.12): demands_loss ∘ loss_strain"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobResources->HealthComplaints:Negative",
+      "kind": "implied",
+      "antecedent": "JDR.JobResources",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR along 1 path (S=0.12): resources_exhaustion ∘ exhaustion_health"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:JobResources->OrganizationalCommitment:Positive",
+      "kind": "implied",
+      "antecedent": "JDR.JobResources",
+      "consequent": "JDR.OrganizationalCommitment",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR along 1 path (S=0.12): resources_engagement ∘ engagement_commitment"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:PersonalResources->JobResources:Positive",
+      "kind": "implied",
+      "antecedent": "JDR.PersonalResources",
+      "consequent": "JDR.JobResources",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR along 1 path (S=0.12): personal_resources_engagement ∘ engagement_resources"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:PersonalResources->OrganizationalCommitment:Positive",
+      "kind": "implied",
+      "antecedent": "JDR.PersonalResources",
+      "consequent": "JDR.OrganizationalCommitment",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from JDR along 1 path (S=0.12): personal_resources_engagement ∘ engagement_commitment"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:ResourceGain->ResourceLoss:Negative",
+      "kind": "implied",
+      "antecedent": "COR.ResourceGain",
+      "consequent": "COR.ResourceLoss",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR along 1 path (S=0.12): gain_strain ∘ strain_loss"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Resources->Engagement:Positive",
+      "kind": "implied",
+      "antecedent": "COR.Resources",
+      "consequent": "Engagement.Engagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR along 1 path (S=0.12): resources_gain ∘ gain_engagement"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Resources->NetLoss:Negative",
+      "kind": "implied",
+      "antecedent": "Hobfoll1989.Resources",
+      "consequent": "Hobfoll1989.NetLoss",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Hobfoll1989"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from Hobfoll1989 along 1 path (S=0.12): resources_stress ∘ stress_loss"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Resources->ResourceLoss:Negative",
+      "kind": "implied",
+      "antecedent": "COR.Resources",
+      "consequent": "COR.ResourceLoss",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR along 1 path (S=0.12): resources_strain ∘ strain_loss"
+      ],
+      "members": []
+    },
+    {
+      "name": "implied:Strain->Exhaustion:Positive",
+      "kind": "implied",
+      "antecedent": "COR.Strain",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 1.0,
+      "score": 0.5312,
+      "rationale": [
+        "implied by composition and never stated (E=1.00, I=1)",
+        "composes propositions from COR along 1 path (S=0.12): strain_loss ∘ loss_exhaustion"
+      ],
+      "members": []
+    },
+    {
+      "name": "excessive_engagement",
+      "kind": "registered",
+      "antecedent": "Workaholism.WorkingExcessively",
+      "consequent": "Engagement.Engagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Workaholism"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.875,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4987,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Workaholism) (E=0.70)",
+        "1 theory assert it, 6 implied propositions depend on it (S=0.88)"
+      ],
+      "members": [
+        "excessive_engagement"
+      ]
+    },
+    {
+      "name": "harmonious_engagement",
+      "kind": "registered",
+      "antecedent": "Passion.HarmoniousPassion",
+      "consequent": "Engagement.Engagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.875,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4987,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Passion) (E=0.70)",
+        "1 theory assert it, 6 implied propositions depend on it (S=0.88)"
+      ],
+      "members": [
+        "harmonious_engagement"
+      ]
+    },
+    {
+      "name": "resources_engagement",
+      "kind": "registered",
+      "antecedent": "BakkerDemerouti2007.JobResources",
+      "consequent": "Engagement.Engagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BakkerDemerouti2007"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.875,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4987,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (BakkerDemerouti2007) (E=0.70)",
+        "1 theory assert it, 6 implied propositions depend on it (S=0.88)"
+      ],
+      "members": [
+        "resources_engagement"
+      ]
+    },
+    {
+      "name": "exhaustion_task_performance",
+      "kind": "registered",
+      "antecedent": "Burnout.Exhaustion",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Burnout"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 1.0,
+      "disagreement": 0.8,
+      "disagreement_kind": "implied_contradiction",
+      "implied_untested": 0.0,
+      "score": 0.49,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (Burnout) (E=0.10)",
+        "1 theory assert it, 13 implied propositions depend on it (S=1.00)",
+        "disagreement: implied_contradiction (G=0.80)"
+      ],
+      "members": [
+        "exhaustion_task_performance"
+      ]
+    },
+    {
+      "name": "agentic_thriving",
+      "kind": "registered",
+      "antecedent": "Thriving.AgenticBehaviors",
+      "consequent": "Spreitzer2005.Thriving",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Spreitzer2005"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4625,
+      "rationale": [
+        "strongest evidence for the claim: None (Spreitzer2005) (E=1.00)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "agentic_thriving"
+      ]
+    },
+    {
+      "name": "discretion_agentic",
+      "kind": "registered",
+      "antecedent": "Thriving.DecisionDiscretion",
+      "consequent": "Thriving.AgenticBehaviors",
+      "direction": "Positive",
+      "level": "Unit",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Spreitzer2005",
+        "Thriving"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4625,
+      "rationale": [
+        "strongest evidence for the claim: None (Thriving) (E=1.00)",
+        "2 theories assert it, 0 implied propositions depend on it (S=0.25)"
+      ],
+      "members": [
+        "discretion_agentic"
+      ]
+    },
+    {
+      "name": "stress_loss",
+      "kind": "registered",
+      "antecedent": "Hobfoll1989.StressReaction",
+      "consequent": "Hobfoll1989.NetLoss",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Hobfoll1989"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4625,
+      "rationale": [
+        "strongest evidence for the claim: None (Hobfoll1989) (E=1.00)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "stress_loss"
+      ]
+    },
+    {
+      "name": "thriving_health",
+      "kind": "registered",
+      "antecedent": "Spreitzer2005.Thriving",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Spreitzer2005"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4625,
+      "rationale": [
+        "strongest evidence for the claim: None (Spreitzer2005) (E=1.00)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "thriving_health"
+      ]
+    },
+    {
+      "name": "demands_engagement",
+      "kind": "registered",
+      "antecedent": "JDR.JobDemands",
+      "consequent": "Engagement.Engagement",
+      "direction": "Null",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.6,
+      "disagreement_kind": "conditional",
+      "implied_untested": 0.0,
+      "score": 0.4612,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (JDR) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)",
+        "disagreement: conditional (G=0.60)"
+      ],
+      "members": [
+        "demands_engagement"
+      ]
+    },
+    {
+      "name": "demands_exhaustion",
+      "kind": "registered",
+      "antecedent": "BakkerDemerouti2007.JobDemands",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BakkerDemerouti2007"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.625,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4362,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (BakkerDemerouti2007) (E=0.70)",
+        "1 theory assert it, 4 implied propositions depend on it (S=0.62)"
+      ],
+      "members": [
+        "demands_exhaustion"
+      ]
+    },
+    {
+      "name": "demands_task_performance",
+      "kind": "registered",
+      "antecedent": "JDR.JobDemands",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.5,
+      "disagreement_kind": "shape",
+      "implied_untested": 0.0,
+      "score": 0.4362,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (JDR) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)",
+        "disagreement: shape (G=0.50)"
+      ],
+      "members": [
+        "demands_task_performance"
+      ]
+    },
+    {
+      "name": "demands_task_performance",
+      "kind": "registered",
+      "antecedent": "JDR.JobDemands",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Curvilinear",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Activation"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.5,
+      "disagreement_kind": "shape",
+      "implied_untested": 0.0,
+      "score": 0.4362,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Activation) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)",
+        "disagreement: shape (G=0.50)"
+      ],
+      "members": [
+        "demands_task_performance"
+      ]
+    },
+    {
+      "name": "engagement_exhaustion",
+      "kind": "registered",
+      "antecedent": "Schaufeli2002.WorkEngagement",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Schaufeli2002"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.625,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4362,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Schaufeli2002) (E=0.70)",
+        "1 theory assert it, 4 implied propositions depend on it (S=0.62)"
+      ],
+      "members": [
+        "engagement_exhaustion"
+      ]
+    },
+    {
+      "name": "imbalance_exhaustion",
+      "kind": "registered",
+      "antecedent": "ERI.EffortRewardImbalance",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.625,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4362,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (ERI) (E=0.70)",
+        "1 theory assert it, 4 implied propositions depend on it (S=0.62)"
+      ],
+      "members": [
+        "imbalance_exhaustion"
+      ]
+    },
+    {
+      "name": "information_agentic",
+      "kind": "registered",
+      "antecedent": "Thriving.InformationSharing",
+      "consequent": "Thriving.AgenticBehaviors",
+      "direction": "Positive",
+      "level": "Unit",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Thriving"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4313,
+      "rationale": [
+        "strongest evidence for the claim: None (Thriving) (E=1.00)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "information_agentic"
+      ]
+    },
+    {
+      "name": "trust_agentic",
+      "kind": "registered",
+      "antecedent": "Thriving.TrustClimate",
+      "consequent": "Thriving.AgenticBehaviors",
+      "direction": "Positive",
+      "level": "Unit",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Thriving"
+      ],
+      "evidence": "None",
+      "evidence_weakness": 1.0,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.4313,
+      "rationale": [
+        "strongest evidence for the claim: None (Thriving) (E=1.00)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "trust_agentic"
+      ]
+    },
+    {
+      "name": "engagement_commitment",
+      "kind": "registered",
+      "antecedent": "Engagement.Engagement",
+      "consequent": "JDR.OrganizationalCommitment",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 1.0,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.41,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (JDR) (E=0.40)",
+        "1 theory assert it, 8 implied propositions depend on it (S=1.00)"
+      ],
+      "members": [
+        "engagement_commitment"
+      ]
+    },
+    {
+      "name": "engagement_resources",
+      "kind": "registered",
+      "antecedent": "Engagement.Engagement",
+      "consequent": "JDR.JobResources",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 1.0,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.41,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (JDR) (E=0.40)",
+        "1 theory assert it, 10 implied propositions depend on it (S=1.00)"
+      ],
+      "members": [
+        "engagement_resources"
+      ]
+    },
+    {
+      "name": "exhaustion_cynicism",
+      "kind": "registered",
+      "antecedent": "Burnout.Exhaustion",
+      "consequent": "Burnout.Cynicism",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Burnout",
+        "BurnoutProcess"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 1.0,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.41,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Burnout) (E=0.40)",
+        "2 theories assert it, 14 implied propositions depend on it (S=1.00)"
+      ],
+      "members": [
+        "exhaustion_cynicism"
+      ]
+    },
+    {
+      "name": "exhaustion_health",
+      "kind": "registered",
+      "antecedent": "Burnout.Exhaustion",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 1.0,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.41,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (JDR) (E=0.40)",
+        "1 theory assert it, 13 implied propositions depend on it (S=1.00)"
+      ],
+      "members": [
+        "exhaustion_health"
+      ]
+    },
+    {
+      "name": "gain_engagement",
+      "kind": "registered",
+      "antecedent": "COR.ResourceGain",
+      "consequent": "Engagement.Engagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 1.0,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.41,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (COR) (E=0.40)",
+        "1 theory assert it, 7 implied propositions depend on it (S=1.00)"
+      ],
+      "members": [
+        "gain_engagement"
+      ]
+    },
+    {
+      "name": "strain_loss",
+      "kind": "registered",
+      "antecedent": "COR.Strain",
+      "consequent": "COR.ResourceLoss",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 1.0,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.41,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (COR) (E=0.40)",
+        "1 theory assert it, 7 implied propositions depend on it (S=1.00)"
+      ],
+      "members": [
+        "strain_loss"
+      ]
+    },
+    {
+      "name": "challenge_exhaustion",
+      "kind": "registered",
+      "antecedent": "ChallengeHindrance.ChallengeDemands",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.625,
+      "disagreement": 0.8,
+      "disagreement_kind": "implied_contradiction",
+      "implied_untested": 0.0,
+      "score": 0.3962,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (ChallengeHindrance) (E=0.10)",
+        "1 theory assert it, 4 implied propositions depend on it (S=0.62)",
+        "disagreement: implied_contradiction (G=0.80)"
+      ],
+      "members": [
+        "challenge_exhaustion"
+      ]
+    },
+    {
+      "name": "personal_resources_engagement",
+      "kind": "registered",
+      "antecedent": "JDR.PersonalResources",
+      "consequent": "Engagement.Engagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.875,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3788,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (JDR) (E=0.40)",
+        "1 theory assert it, 6 implied propositions depend on it (S=0.88)"
+      ],
+      "members": [
+        "personal_resources_engagement"
+      ]
+    },
+    {
+      "name": "demands_loss",
+      "kind": "registered",
+      "antecedent": "JDR.JobDemands",
+      "consequent": "COR.ResourceLoss",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.375,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3737,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (COR) (E=0.70)",
+        "1 theory assert it, 2 implied propositions depend on it (S=0.38)"
+      ],
+      "members": [
+        "demands_loss"
+      ]
+    },
+    {
+      "name": "effort_strain",
+      "kind": "registered",
+      "antecedent": "ERI.Effort",
+      "consequent": "COR.Strain",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3425,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (ERI) (E=0.70)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "effort_strain"
+      ]
+    },
+    {
+      "name": "overcommitment_strain",
+      "kind": "registered",
+      "antecedent": "ERI.Overcommitment",
+      "consequent": "COR.Strain",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3425,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (ERI) (E=0.70)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "overcommitment_strain"
+      ]
+    },
+    {
+      "name": "resources_flow",
+      "kind": "registered",
+      "antecedent": "JDR.JobResources",
+      "consequent": "Flow.Flow",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Flow"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3425,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Flow) (E=0.70)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "resources_flow"
+      ]
+    },
+    {
+      "name": "resources_reduced_efficacy",
+      "kind": "registered",
+      "antecedent": "JDR.JobResources",
+      "consequent": "Burnout.ReducedEfficacy",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BurnoutProcess"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3425,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (BurnoutProcess) (E=0.70)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "resources_reduced_efficacy"
+      ]
+    },
+    {
+      "name": "resources_stress",
+      "kind": "registered",
+      "antecedent": "Hobfoll1989.Resources",
+      "consequent": "Hobfoll1989.StressReaction",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Hobfoll1989"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3425,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Hobfoll1989) (E=0.70)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "resources_stress"
+      ]
+    },
+    {
+      "name": "reward_strain",
+      "kind": "registered",
+      "antecedent": "ERI.Reward",
+      "consequent": "COR.Strain",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3425,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (ERI) (E=0.70)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "reward_strain"
+      ]
+    },
+    {
+      "name": "demands_engagement_detachment",
+      "kind": "registered",
+      "antecedent": "JDR.JobDemands",
+      "consequent": "Engagement.Engagement",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "moderator:WeeklyDetachment:Buffers",
+      "theories": [
+        "Recovery"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.125,
+      "disagreement": 0.6,
+      "disagreement_kind": "conditional",
+      "implied_untested": 0.0,
+      "score": 0.3413,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Recovery) (E=0.40)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)",
+        "disagreement: conditional (G=0.60)"
+      ],
+      "members": [
+        "demands_engagement_detachment"
+      ]
+    },
+    {
+      "name": "detachment_exhaustion",
+      "kind": "registered",
+      "antecedent": "Recovery.Detachment",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Recovery"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.625,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3163,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Recovery) (E=0.40)",
+        "1 theory assert it, 4 implied propositions depend on it (S=0.62)"
+      ],
+      "members": [
+        "detachment_exhaustion"
+      ]
+    },
+    {
+      "name": "harmonious_exhaustion",
+      "kind": "registered",
+      "antecedent": "Passion.HarmoniousPassion",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.625,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3163,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Passion) (E=0.40)",
+        "1 theory assert it, 4 implied propositions depend on it (S=0.62)"
+      ],
+      "members": [
+        "harmonious_exhaustion"
+      ]
+    },
+    {
+      "name": "obsessive_exhaustion",
+      "kind": "registered",
+      "antecedent": "Passion.ObsessivePassion",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Passion"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.625,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3163,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Passion) (E=0.40)",
+        "1 theory assert it, 4 implied propositions depend on it (S=0.62)"
+      ],
+      "members": [
+        "obsessive_exhaustion"
+      ]
+    },
+    {
+      "name": "compulsive_engagement",
+      "kind": "registered",
+      "antecedent": "Workaholism.WorkingCompulsively",
+      "consequent": "Engagement.Engagement",
+      "direction": "Null",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Workaholism"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Workaholism) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "compulsive_engagement"
+      ]
+    },
+    {
+      "name": "demands_exhaustion_buffered",
+      "kind": "registered",
+      "antecedent": "JDR.JobDemands",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "moderator:JobResources:Buffers",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (JDR) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "demands_exhaustion_buffered"
+      ]
+    },
+    {
+      "name": "demands_exhaustion_buffered",
+      "kind": "registered",
+      "antecedent": "BakkerDemerouti2007.JobDemands",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "moderator:JobResources:Buffers",
+      "theories": [
+        "BakkerDemerouti2007"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (BakkerDemerouti2007) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "demands_exhaustion_buffered"
+      ]
+    },
+    {
+      "name": "engagement_team_performance",
+      "kind": "registered",
+      "antecedent": "Engagement.Engagement",
+      "consequent": "Team.TeamPerformance",
+      "direction": "Positive",
+      "level": "Team",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Team"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Team) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "engagement_team_performance"
+      ]
+    },
+    {
+      "name": "exhaustion_turnover",
+      "kind": "registered",
+      "antecedent": "MaslachJackson1981.EmotionalExhaustion",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "MaslachJackson1981"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (MaslachJackson1981) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "exhaustion_turnover"
+      ]
+    },
+    {
+      "name": "flow_task_performance_conscientious",
+      "kind": "registered",
+      "antecedent": "Flow.Flow",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "moderator:Conscientiousness:Amplifies",
+      "theories": [
+        "Flow"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Flow) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "flow_task_performance_conscientious"
+      ]
+    },
+    {
+      "name": "harmonious_flow",
+      "kind": "registered",
+      "antecedent": "Passion.HarmoniousPassion",
+      "consequent": "Flow.FlowProneness",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Static",
+      "boundary": "none",
+      "theories": [
+        "Passion"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Passion) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "harmonious_flow"
+      ]
+    },
+    {
+      "name": "imbalance_strain_overcommitted",
+      "kind": "registered",
+      "antecedent": "ERI.EffortRewardImbalance",
+      "consequent": "COR.Strain",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "moderator:Overcommitment:Amplifies",
+      "theories": [
+        "ERI"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (ERI) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "imbalance_strain_overcommitted"
+      ]
+    },
+    {
+      "name": "loss_stress",
+      "kind": "registered",
+      "antecedent": "Hobfoll1989.NetLoss",
+      "consequent": "Hobfoll1989.StressReaction",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Hobfoll1989"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Hobfoll1989) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "loss_stress"
+      ]
+    },
+    {
+      "name": "obsessive_flow",
+      "kind": "registered",
+      "antecedent": "Passion.ObsessivePassion",
+      "consequent": "Flow.FlowProneness",
+      "direction": "Null",
+      "level": "Individual",
+      "horizon": "Static",
+      "boundary": "none",
+      "theories": [
+        "Passion"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Passion) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "obsessive_flow"
+      ]
+    },
+    {
+      "name": "resources_engagement_boosted",
+      "kind": "registered",
+      "antecedent": "JDR.JobResources",
+      "consequent": "Engagement.Engagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "moderator:JobDemands:Amplifies",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (JDR) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "resources_engagement_boosted"
+      ]
+    },
+    {
+      "name": "resources_engagement_boosted",
+      "kind": "registered",
+      "antecedent": "BakkerDemerouti2007.JobResources",
+      "consequent": "Engagement.Engagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "moderator:JobDemands:Amplifies",
+      "theories": [
+        "BakkerDemerouti2007"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (BakkerDemerouti2007) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "resources_engagement_boosted"
+      ]
+    },
+    {
+      "name": "team_engagement_performance",
+      "kind": "registered",
+      "antecedent": "Team.TeamEngagement",
+      "consequent": "Team.TeamPerformance",
+      "direction": "Positive",
+      "level": "Team",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Team"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (Team) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "team_engagement_performance"
+      ]
+    },
+    {
+      "name": "vigor_task_performance",
+      "kind": "registered",
+      "antecedent": "ShiromVigor.ShiromVigor",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ShiromVigor"
+      ],
+      "evidence": "CrossSectional",
+      "evidence_weakness": 0.7,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.3112,
+      "rationale": [
+        "strongest evidence for the claim: CrossSectional (ShiromVigor) (E=0.70)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "vigor_task_performance"
+      ]
+    },
+    {
+      "name": "engagement_contextual_performance",
+      "kind": "registered",
+      "antecedent": "Engagement.Engagement",
+      "consequent": "Engagement.ContextualPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Engagement"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 1.0,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.29,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (Engagement) (E=0.10)",
+        "1 theory assert it, 8 implied propositions depend on it (S=1.00)"
+      ],
+      "members": [
+        "engagement_contextual_performance"
+      ]
+    },
+    {
+      "name": "engagement_task_performance",
+      "kind": "registered",
+      "antecedent": "Engagement.Engagement",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BakkerDemerouti2007",
+        "Engagement"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 1.0,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.29,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (Engagement) (E=0.10)",
+        "2 theories assert it, 8 implied propositions depend on it (S=1.00)"
+      ],
+      "members": [
+        "engagement_performance",
+        "engagement_task_performance"
+      ]
+    },
+    {
+      "name": "engagement_turnover",
+      "kind": "registered",
+      "antecedent": "Engagement.Engagement",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Engagement"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 1.0,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.29,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (Engagement) (E=0.10)",
+        "1 theory assert it, 8 implied propositions depend on it (S=1.00)"
+      ],
+      "members": [
+        "engagement_turnover"
+      ]
+    },
+    {
+      "name": "agentic_thriving",
+      "kind": "registered",
+      "antecedent": "Thriving.AgenticBehaviors",
+      "consequent": "Thriving.Thriving",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Thriving"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.285,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Thriving) (E=0.40)",
+        "1 theory assert it, 3 implied propositions depend on it (S=0.50)"
+      ],
+      "members": [
+        "agentic_thriving"
+      ]
+    },
+    {
+      "name": "challenge_task_performance",
+      "kind": "registered",
+      "antecedent": "ChallengeHindrance.ChallengeDemands",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.125,
+      "disagreement": 0.8,
+      "disagreement_kind": "implied_contradiction",
+      "implied_untested": 0.0,
+      "score": 0.2712,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (ChallengeHindrance) (E=0.10)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)",
+        "disagreement: implied_contradiction (G=0.80)"
+      ],
+      "members": [
+        "challenge_task_performance"
+      ]
+    },
+    {
+      "name": "challenge_engagement",
+      "kind": "registered",
+      "antecedent": "ChallengeHindrance.ChallengeDemands",
+      "consequent": "Engagement.Engagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.875,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.2588,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (ChallengeHindrance) (E=0.10)",
+        "1 theory assert it, 6 implied propositions depend on it (S=0.88)"
+      ],
+      "members": [
+        "challenge_engagement"
+      ]
+    },
+    {
+      "name": "hindrance_engagement",
+      "kind": "registered",
+      "antecedent": "ChallengeHindrance.HindranceDemands",
+      "consequent": "Engagement.Engagement",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.875,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.2588,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (ChallengeHindrance) (E=0.10)",
+        "1 theory assert it, 6 implied propositions depend on it (S=0.88)"
+      ],
+      "members": [
+        "hindrance_engagement"
+      ]
+    },
+    {
+      "name": "loss_exhaustion",
+      "kind": "registered",
+      "antecedent": "COR.ResourceLoss",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.875,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.2588,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (COR) (E=0.10)",
+        "1 theory assert it, 6 implied propositions depend on it (S=0.88)"
+      ],
+      "members": [
+        "loss_exhaustion"
+      ]
+    },
+    {
+      "name": "gain_strain",
+      "kind": "registered",
+      "antecedent": "COR.ResourceGain",
+      "consequent": "COR.Strain",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.375,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.2538,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (COR) (E=0.40)",
+        "1 theory assert it, 2 implied propositions depend on it (S=0.38)"
+      ],
+      "members": [
+        "gain_strain"
+      ]
+    },
+    {
+      "name": "resources_gain",
+      "kind": "registered",
+      "antecedent": "COR.Resources",
+      "consequent": "COR.ResourceGain",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.375,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.2538,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (COR) (E=0.40)",
+        "1 theory assert it, 2 implied propositions depend on it (S=0.38)"
+      ],
+      "members": [
+        "resources_gain"
+      ]
+    },
+    {
+      "name": "demands_exhaustion",
+      "kind": "registered",
+      "antecedent": "JDR.JobDemands",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "BurnoutProcess",
+        "JDR"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.75,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.2275,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (JDR) (E=0.10)",
+        "2 theories assert it, 4 implied propositions depend on it (S=0.75)"
+      ],
+      "members": [
+        "demands_exhaustion"
+      ]
+    },
+    {
+      "name": "resources_engagement",
+      "kind": "registered",
+      "antecedent": "JDR.JobResources",
+      "consequent": "Engagement.Engagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.75,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.2275,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (JDR) (E=0.10)",
+        "1 theory assert it, 5 implied propositions depend on it (S=0.75)"
+      ],
+      "members": [
+        "resources_engagement"
+      ]
+    },
+    {
+      "name": "resources_exhaustion",
+      "kind": "registered",
+      "antecedent": "JDR.JobResources",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "JDR"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.75,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.2275,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (JDR) (E=0.10)",
+        "1 theory assert it, 5 implied propositions depend on it (S=0.75)"
+      ],
+      "members": [
+        "resources_exhaustion"
+      ]
+    },
+    {
+      "name": "loss_strain",
+      "kind": "registered",
+      "antecedent": "COR.ResourceLoss",
+      "consequent": "COR.Strain",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.2225,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (COR) (E=0.40)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "loss_strain"
+      ]
+    },
+    {
+      "name": "hindrance_exhaustion",
+      "kind": "registered",
+      "antecedent": "ChallengeHindrance.HindranceDemands",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.625,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1963,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (ChallengeHindrance) (E=0.10)",
+        "1 theory assert it, 4 implied propositions depend on it (S=0.62)"
+      ],
+      "members": [
+        "hindrance_exhaustion"
+      ]
+    },
+    {
+      "name": "workaholism_exhaustion",
+      "kind": "registered",
+      "antecedent": "Workaholism.Workaholism",
+      "consequent": "Burnout.Exhaustion",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Workaholism"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.625,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1963,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (Workaholism) (E=0.10)",
+        "1 theory assert it, 4 implied propositions depend on it (S=0.62)"
+      ],
+      "members": [
+        "workaholism_exhaustion"
+      ]
+    },
+    {
+      "name": "balance_flow",
+      "kind": "registered",
+      "antecedent": "Flow.ChallengeSkillBalance",
+      "consequent": "Flow.Flow",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Momentary",
+      "boundary": "none",
+      "theories": [
+        "Flow"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1913,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Flow) (E=0.40)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "balance_flow"
+      ]
+    },
+    {
+      "name": "demands_health_detachment",
+      "kind": "registered",
+      "antecedent": "JDR.JobDemands",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "moderator:WeeklyDetachment:Buffers",
+      "theories": [
+        "Recovery"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1913,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Recovery) (E=0.40)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "demands_health_detachment"
+      ]
+    },
+    {
+      "name": "detachment_daily_engagement",
+      "kind": "registered",
+      "antecedent": "Recovery.Detachment",
+      "consequent": "Recovery.DailyEngagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Daily",
+      "boundary": "none",
+      "theories": [
+        "Recovery"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1913,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Recovery) (E=0.40)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "detachment_daily_engagement"
+      ]
+    },
+    {
+      "name": "flow_vigor_detached",
+      "kind": "registered",
+      "antecedent": "Flow.Flow",
+      "consequent": "Engagement.Vigor",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "moderator:WeeklyDetachment:Amplifies",
+      "theories": [
+        "Flow"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1913,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Flow) (E=0.40)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "flow_vigor_detached"
+      ]
+    },
+    {
+      "name": "imbalance_strain",
+      "kind": "registered",
+      "antecedent": "Siegrist1996.Imbalance",
+      "consequent": "Siegrist1996.CardiovascularStrain",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Siegrist1996"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1913,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Siegrist1996) (E=0.40)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "imbalance_strain"
+      ]
+    },
+    {
+      "name": "imbalance_strain_overcommitted",
+      "kind": "registered",
+      "antecedent": "Siegrist1996.Imbalance",
+      "consequent": "Siegrist1996.CardiovascularStrain",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "moderator:Overcommitment:Amplifies",
+      "theories": [
+        "Siegrist1996"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1913,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Siegrist1996) (E=0.40)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "imbalance_strain_overcommitted"
+      ]
+    },
+    {
+      "name": "overcommitment_strain",
+      "kind": "registered",
+      "antecedent": "Siegrist1996.Overcommitment",
+      "consequent": "Siegrist1996.CardiovascularStrain",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Siegrist1996"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1913,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Siegrist1996) (E=0.40)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "overcommitment_strain"
+      ]
+    },
+    {
+      "name": "relaxation_daily_engagement",
+      "kind": "registered",
+      "antecedent": "Recovery.Relaxation",
+      "consequent": "Recovery.DailyEngagement",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Daily",
+      "boundary": "none",
+      "theories": [
+        "Recovery"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1913,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (Recovery) (E=0.40)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "relaxation_daily_engagement"
+      ]
+    },
+    {
+      "name": "vigor_health",
+      "kind": "registered",
+      "antecedent": "ShiromVigor.ShiromVigor",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ShiromVigor"
+      ],
+      "evidence": "Longitudinal",
+      "evidence_weakness": 0.4,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1913,
+      "rationale": [
+        "strongest evidence for the claim: Longitudinal (ShiromVigor) (E=0.40)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "vigor_health"
+      ]
+    },
+    {
+      "name": "thriving_burnout",
+      "kind": "registered",
+      "antecedent": "Thriving.Thriving",
+      "consequent": "Burnout.Burnout",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Thriving"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.5,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.165,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (Thriving) (E=0.10)",
+        "1 theory assert it, 3 implied propositions depend on it (S=0.50)"
+      ],
+      "members": [
+        "thriving_burnout"
+      ]
+    },
+    {
+      "name": "burnout_task_performance",
+      "kind": "registered",
+      "antecedent": "Burnout.Burnout",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Burnout"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1025,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (Burnout) (E=0.10)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "burnout_task_performance"
+      ]
+    },
+    {
+      "name": "burnout_turnover",
+      "kind": "registered",
+      "antecedent": "Burnout.Burnout",
+      "consequent": "Engagement.TurnoverIntention",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Burnout"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1025,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (Burnout) (E=0.10)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "burnout_turnover"
+      ]
+    },
+    {
+      "name": "imbalance_strain",
+      "kind": "registered",
+      "antecedent": "ERI.EffortRewardImbalance",
+      "consequent": "COR.Strain",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ERI"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1025,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (ERI) (E=0.10)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "imbalance_strain"
+      ]
+    },
+    {
+      "name": "resources_strain",
+      "kind": "registered",
+      "antecedent": "COR.Resources",
+      "consequent": "COR.Strain",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "COR"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1025,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (COR) (E=0.10)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "resources_strain"
+      ]
+    },
+    {
+      "name": "thriving_health",
+      "kind": "registered",
+      "antecedent": "Thriving.Thriving",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Thriving"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1025,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (Thriving) (E=0.10)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "thriving_health"
+      ]
+    },
+    {
+      "name": "thriving_task_performance",
+      "kind": "registered",
+      "antecedent": "Thriving.Thriving",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Thriving"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.25,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.1025,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (Thriving) (E=0.10)",
+        "1 theory assert it, 1 implied proposition depend on it (S=0.25)"
+      ],
+      "members": [
+        "thriving_task_performance"
+      ]
+    },
+    {
+      "name": "hindrance_task_performance",
+      "kind": "registered",
+      "antecedent": "ChallengeHindrance.HindranceDemands",
+      "consequent": "Engagement.TaskPerformance",
+      "direction": "Negative",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "ChallengeHindrance"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.0713,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (ChallengeHindrance) (E=0.10)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "hindrance_task_performance"
+      ]
+    },
+    {
+      "name": "workaholism_health",
+      "kind": "registered",
+      "antecedent": "Workaholism.Workaholism",
+      "consequent": "JDR.HealthComplaints",
+      "direction": "Positive",
+      "level": "Individual",
+      "horizon": "Weekly",
+      "boundary": "none",
+      "theories": [
+        "Workaholism"
+      ],
+      "evidence": "MetaAnalytic",
+      "evidence_weakness": 0.1,
+      "structure": 0.125,
+      "disagreement": 0.0,
+      "disagreement_kind": "none",
+      "implied_untested": 0.0,
+      "score": 0.0713,
+      "rationale": [
+        "strongest evidence for the claim: MetaAnalytic (Workaholism) (E=0.10)",
+        "1 theory assert it, 0 implied propositions depend on it (S=0.12)"
+      ],
+      "members": [
+        "workaholism_health"
+      ]
+    }
+  ]
+}

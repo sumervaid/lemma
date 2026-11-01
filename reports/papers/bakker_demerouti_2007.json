@@ -1,0 +1,70 @@
+{
+  "paper_id": "bakker_demerouti_2007",
+  "module": "BakkerDemerouti2007",
+  "status": "accepted",
+  "provider": "fixture",
+  "model": "hand-written fixture (no model run)",
+  "reason": "",
+  "ambiguities": [
+    "The paper gives no horizon; Weekly chosen to match the library's engagement and exhaustion constructs.",
+    "Job demands are listed by example; the bundle uses the three examples named on p. 312 (work pressure, emotional demands, role conflict).",
+    "Propositions 1 and 2 are stated as 'most important predictors'; encoded as unconditional positive relations with meta-analytic evidence cited by the paper's review, not by original data."
+  ],
+  "counts": {
+    "constructs": 2,
+    "propositions": 5,
+    "aggregations": 0,
+    "temporals": 0
+  },
+  "errors": [],
+  "overlap_warnings": [
+    {
+      "severity": "warning",
+      "line": 8,
+      "column": 2,
+      "message": "shares primitives Demand Workload, Demand Emotional, Demand RoleConflict with JobDemands.workload, JobDemands.emotional, JobDemands.roleConflict\n  JobDemands.workPressure ~ JobDemands.workload : Demand Workload at Individual / Weekly\n  JobDemands.emotional ~ JobDemands.emotional : Demand Emotional at Individual / Weekly\n  JobDemands.roleConflict ~ JobDemands.roleConflict : Demand RoleConflict at Individual / Weekly\n  overlap kind: subtype (every primitive of JobDemands is a primitive of JobDemands)\n  resolve with: declare_overlap JobDemands distinct_from JobDemands \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 8,
+      "column": 2,
+      "message": "shares primitive Demand Workload with Effort.workload\n  JobDemands.workPressure ~ Effort.workload : Demand Workload at Individual / Weekly\n  overlap kind: partial (1 of 3 primitive(s) of JobDemands, 1 of 4 of Effort)\n  resolve with: declare_overlap JobDemands distinct_from Effort \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 8,
+      "column": 2,
+      "message": "shares primitive Demand Workload with EffortRewardImbalance ∋ Effort.workload\n  JobDemands.workPressure ~ EffortRewardImbalance ∋ Effort.workload : Demand Workload at Individual / Weekly\n  overlap kind: partial (1 of 3 primitive(s) of JobDemands, 1 of 7 of EffortRewardImbalance)\n  resolve with: declare_overlap JobDemands distinct_from EffortRewardImbalance \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 8,
+      "column": 2,
+      "message": "shares primitive Demand Workload with ChallengeDemands.workload\n  JobDemands.workPressure ~ ChallengeDemands.workload : Demand Workload at Individual / Weekly\n  overlap kind: partial (1 of 3 primitive(s) of JobDemands, 1 of 3 of ChallengeDemands)\n  resolve with: declare_overlap JobDemands distinct_from ChallengeDemands \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 8,
+      "column": 2,
+      "message": "shares primitive Demand RoleConflict with HindranceDemands.roleConflict\n  JobDemands.roleConflict ~ HindranceDemands.roleConflict : Demand RoleConflict at Individual / Weekly\n  overlap kind: partial (1 of 3 primitive(s) of JobDemands, 1 of 3 of HindranceDemands)\n  resolve with: declare_overlap JobDemands distinct_from HindranceDemands \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitives Resource Autonomy, Resource SocialSupport, Resource Feedback, Resource Development with JobResources.autonomy, JobResources.support, JobResources.feedback, JobResources.development\n  JobResources.autonomy ~ JobResources.autonomy : Resource Autonomy at Individual / Weekly\n  JobResources.support ~ JobResources.support : Resource SocialSupport at Individual / Weekly\n  JobResources.feedback ~ JobResources.feedback : Resource Feedback at Individual / Weekly\n  JobResources.development ~ JobResources.development : Resource Development at Individual / Weekly\n  overlap kind: subtype (every primitive of JobResources is a primitive of JobResources)\n  resolve with: declare_overlap JobResources distinct_from JobResources \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitives Resource Autonomy, Resource SocialSupport, Resource Development with Resources.control, Resources.support, Resources.advancement\n  JobResources.autonomy ~ Resources.control : Resource Autonomy at Individual / Weekly\n  JobResources.support ~ Resources.support : Resource SocialSupport at Individual / Weekly\n  JobResources.development ~ Resources.advancement : Resource Development at Individual / Weekly\n  overlap kind: partial (3 of 4 primitive(s) of JobResources, 3 of 11 of Resources)\n  resolve with: declare_overlap JobResources distinct_from Resources \"reason\" (or alias_of / subtype_of)"
+    }
+  ],
+  "contradiction_warnings": [],
+  "routing_notes": [],
+  "other_messages": [],
+  "lean_path": "Lemma/Generated/BakkerDemerouti2007.lean",
+  "repairs": 0,
+  "generated_at": "2026-11-01T18:36:54+00:00"
+}

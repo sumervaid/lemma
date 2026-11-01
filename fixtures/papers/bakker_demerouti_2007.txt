@@ -1,0 +1,17 @@
+TITLE: The job demands-resources model: state of the art
+REFERENCE: Bakker, A. B. & Demerouti, E. (2007). Journal of Managerial Psychology, 22(3), 309-328.
+
+DEFINITIONS
+- Job demands: physical, psychological, social or organizational aspects of the job that require sustained physical and/or psychological effort and are associated with physiological and/or psychological costs (p. 312). Examples: work pressure, emotional demands, role conflict.
+- Job resources: aspects of the job that are functional in achieving work goals, reduce job demands and their costs, or stimulate personal growth, learning and development (p. 312). Examples: autonomy, social support, performance feedback, opportunities for development.
+- Work engagement: a positive, fulfilling work-related state of mind (vigor, dedication, absorption), after Schaufeli et al. (2002).
+- Exhaustion: the core burnout dimension, depletion of energy.
+
+PROPOSITIONS
+1. Job demands are the most important predictors of exhaustion (health impairment process). Evidence: multiple cross-sectional and longitudinal studies reviewed.
+2. Job resources are the most important predictors of work engagement (motivational process).
+3. Job resources buffer the impact of job demands on exhaustion (buffer hypothesis; Bakker, Demerouti & Euwema 2005).
+4. Job resources particularly influence engagement when job demands are high (Bakker, Hakanen, Demerouti & Xanthopoulou 2007).
+5. Engagement predicts in-role and extra-role performance.
+
+MEASUREMENT: self-report questionnaires at the individual level; the model is tested with cross-sectional and multi-wave designs.

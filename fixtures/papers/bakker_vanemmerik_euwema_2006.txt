@@ -1,0 +1,13 @@
+TITLE: Crossover of burnout and engagement in work teams
+REFERENCE: Bakker, A. B., van Emmerik, H. & Euwema, M. C. (2006). Work and Occupations, 33(4), 464-489.
+
+DEFINITIONS
+- Team-level burnout: the aggregate (mean) of team members' burnout, representing a shared affective state.
+- Team-level engagement: the aggregate (mean) of team members' engagement.
+- Individual burnout and engagement: MBI and UWES as usual.
+
+PROPOSITIONS
+1. Team-level burnout is positively related to individual team members' burnout, after controlling for individual job demands and resources (crossover).
+2. Team-level engagement is positively related to individual engagement (crossover).
+
+MEASUREMENT: 2,229 Dutch constabulary officers in 85 teams; self-report; multilevel analysis with team means as level-2 predictors of individual outcomes; cross-sectional.

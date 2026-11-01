@@ -1,0 +1,154 @@
+{
+  "paper_id": "siegrist_1996",
+  "module": "Siegrist1996",
+  "status": "accepted",
+  "provider": "fixture",
+  "model": "hand-written fixture (no model run)",
+  "reason": "",
+  "ambiguities": [
+    "Overcommitment is described as a stable coping pattern; declared Static.",
+    "Health outcomes are cardiovascular in the cited cohorts; the strain construct bundles negative affect with cardiovascular symptoms, which departs from the library's psychosomatic strain.",
+    "Evidence declared Longitudinal for the imbalance proposition on the strength of the prospective cohorts the paper reviews."
+  ],
+  "counts": {
+    "constructs": 5,
+    "propositions": 3,
+    "aggregations": 0,
+    "temporals": 0
+  },
+  "errors": [],
+  "overlap_warnings": [
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitives Demand TimePressure, Demand Workload with JobDemands.timePressure, JobDemands.workload\n  Effort.timePressure ~ JobDemands.timePressure : Demand TimePressure at Individual / Weekly\n  Effort.overload ~ JobDemands.workload : Demand Workload at Individual / Weekly\n  overlap kind: partial (2 of 4 primitive(s) of Effort, 2 of 6 of JobDemands)\n  resolve with: declare_overlap Effort distinct_from JobDemands \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitives Demand TimePressure, Demand Interruption, Demand Responsibility, Demand Workload with Effort.timePressure, Effort.interruptions, Effort.responsibility, Effort.workload\n  Effort.timePressure ~ Effort.timePressure : Demand TimePressure at Individual / Weekly\n  Effort.interruptions ~ Effort.interruptions : Demand Interruption at Individual / Weekly\n  Effort.responsibility ~ Effort.responsibility : Demand Responsibility at Individual / Weekly\n  Effort.overload ~ Effort.workload : Demand Workload at Individual / Weekly\n  overlap kind: identity (Effort and Effort reduce to the same 4 primitive(s))\n  resolve with: declare_overlap Effort distinct_from Effort \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitives Demand TimePressure, Demand Interruption, Demand Responsibility, Demand Workload with EffortRewardImbalance ∋ Effort.timePressure, EffortRewardImbalance ∋ Effort.interruptions, EffortRewardImbalance ∋ Effort.responsibility, EffortRewardImbalance ∋ Effort.workload\n  Effort.timePressure ~ EffortRewardImbalance ∋ Effort.timePressure : Demand TimePressure at Individual / Weekly\n  Effort.interruptions ~ EffortRewardImbalance ∋ Effort.interruptions : Demand Interruption at Individual / Weekly\n  Effort.responsibility ~ EffortRewardImbalance ∋ Effort.responsibility : Demand Responsibility at Individual / Weekly\n  Effort.overload ~ EffortRewardImbalance ∋ Effort.workload : Demand Workload at Individual / Weekly\n  overlap kind: subtype (every primitive of Effort is a primitive of EffortRewardImbalance)\n  resolve with: declare_overlap Effort distinct_from EffortRewardImbalance \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitives Demand TimePressure, Demand Responsibility, Demand Workload with ChallengeDemands.timePressure, ChallengeDemands.responsibility, ChallengeDemands.workload\n  Effort.timePressure ~ ChallengeDemands.timePressure : Demand TimePressure at Individual / Weekly\n  Effort.responsibility ~ ChallengeDemands.responsibility : Demand Responsibility at Individual / Weekly\n  Effort.overload ~ ChallengeDemands.workload : Demand Workload at Individual / Weekly\n  overlap kind: subtype (every primitive of ChallengeDemands is a primitive of Effort)\n  resolve with: declare_overlap Effort distinct_from ChallengeDemands \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 14,
+      "column": 2,
+      "message": "shares primitive Resource CareerSecurity with JobResources.security\n  Reward.statusControl ~ JobResources.security : Resource CareerSecurity at Individual / Weekly\n  overlap kind: partial (1 of 3 primitive(s) of Reward, 1 of 5 of JobResources)\n  resolve with: declare_overlap Reward distinct_from JobResources \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 14,
+      "column": 2,
+      "message": "shares primitives Resource Pay, Resource Esteem, Resource CareerSecurity with Resources.money, Resources.status, Resources.security\n  Reward.money ~ Resources.money : Resource Pay at Individual / Weekly\n  Reward.esteem ~ Resources.status : Resource Esteem at Individual / Weekly\n  Reward.statusControl ~ Resources.security : Resource CareerSecurity at Individual / Weekly\n  overlap kind: subtype (every primitive of Reward is a primitive of Resources)\n  resolve with: declare_overlap Reward distinct_from Resources \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 14,
+      "column": 2,
+      "message": "shares primitives Resource Pay, Resource Esteem, Resource CareerSecurity with Reward.money, Reward.esteem, Reward.career\n  Reward.money ~ Reward.money : Resource Pay at Individual / Weekly\n  Reward.esteem ~ Reward.esteem : Resource Esteem at Individual / Weekly\n  Reward.statusControl ~ Reward.career : Resource CareerSecurity at Individual / Weekly\n  overlap kind: identity (Reward and Reward reduce to the same 3 primitive(s))\n  resolve with: declare_overlap Reward distinct_from Reward \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 14,
+      "column": 2,
+      "message": "shares primitives Resource Pay, Resource Esteem, Resource CareerSecurity with EffortRewardImbalance ∋ Reward.money, EffortRewardImbalance ∋ Reward.esteem, EffortRewardImbalance ∋ Reward.career\n  Reward.money ~ EffortRewardImbalance ∋ Reward.money : Resource Pay at Individual / Weekly\n  Reward.esteem ~ EffortRewardImbalance ∋ Reward.esteem : Resource Esteem at Individual / Weekly\n  Reward.statusControl ~ EffortRewardImbalance ∋ Reward.career : Resource CareerSecurity at Individual / Weekly\n  overlap kind: subtype (every primitive of Reward is a primitive of EffortRewardImbalance)\n  resolve with: declare_overlap Reward distinct_from EffortRewardImbalance \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 20,
+      "column": 2,
+      "message": "shares primitives Demand TimePressure, Demand Workload with JobDemands.timePressure, JobDemands.workload\n  Imbalance ∋ Effort.timePressure ~ JobDemands.timePressure : Demand TimePressure at Individual / Weekly\n  Imbalance ∋ Effort.overload ~ JobDemands.workload : Demand Workload at Individual / Weekly\n  overlap kind: partial (2 of 7 primitive(s) of Imbalance, 2 of 6 of JobDemands)\n  resolve with: declare_overlap Imbalance distinct_from JobDemands \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 20,
+      "column": 2,
+      "message": "shares primitive Resource CareerSecurity with JobResources.security\n  Imbalance ∋ Reward.statusControl ~ JobResources.security : Resource CareerSecurity at Individual / Weekly\n  overlap kind: partial (1 of 7 primitive(s) of Imbalance, 1 of 5 of JobResources)\n  resolve with: declare_overlap Imbalance distinct_from JobResources \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 20,
+      "column": 2,
+      "message": "shares primitives Resource Pay, Resource Esteem, Resource CareerSecurity with Resources.money, Resources.status, Resources.security\n  Imbalance ∋ Reward.money ~ Resources.money : Resource Pay at Individual / Weekly\n  Imbalance ∋ Reward.esteem ~ Resources.status : Resource Esteem at Individual / Weekly\n  Imbalance ∋ Reward.statusControl ~ Resources.security : Resource CareerSecurity at Individual / Weekly\n  overlap kind: partial (3 of 7 primitive(s) of Imbalance, 3 of 11 of Resources)\n  resolve with: declare_overlap Imbalance distinct_from Resources \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 20,
+      "column": 2,
+      "message": "shares primitives Demand TimePressure, Demand Interruption, Demand Responsibility, Demand Workload with Effort.timePressure, Effort.interruptions, Effort.responsibility, Effort.workload\n  Imbalance ∋ Effort.timePressure ~ Effort.timePressure : Demand TimePressure at Individual / Weekly\n  Imbalance ∋ Effort.interruptions ~ Effort.interruptions : Demand Interruption at Individual / Weekly\n  Imbalance ∋ Effort.responsibility ~ Effort.responsibility : Demand Responsibility at Individual / Weekly\n  Imbalance ∋ Effort.overload ~ Effort.workload : Demand Workload at Individual / Weekly\n  overlap kind: subtype (every primitive of Effort is a primitive of Imbalance)\n  resolve with: declare_overlap Imbalance distinct_from Effort \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 20,
+      "column": 2,
+      "message": "shares primitives Resource Pay, Resource Esteem, Resource CareerSecurity with Reward.money, Reward.esteem, Reward.career\n  Imbalance ∋ Reward.money ~ Reward.money : Resource Pay at Individual / Weekly\n  Imbalance ∋ Reward.esteem ~ Reward.esteem : Resource Esteem at Individual / Weekly\n  Imbalance ∋ Reward.statusControl ~ Reward.career : Resource CareerSecurity at Individual / Weekly\n  overlap kind: subtype (every primitive of Reward is a primitive of Imbalance)\n  resolve with: declare_overlap Imbalance distinct_from Reward \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 20,
+      "column": 2,
+      "message": "shares primitives Demand TimePressure, Demand Interruption, Demand Responsibility, Demand Workload, Resource Pay, Resource Esteem, Resource CareerSecurity with EffortRewardImbalance ∋ Effort.timePressure, EffortRewardImbalance ∋ Effort.interruptions, EffortRewardImbalance ∋ Effort.responsibility, EffortRewardImbalance ∋ Effort.workload, EffortRewardImbalance ∋ Reward.money, EffortRewardImbalance ∋ Reward.esteem, EffortRewardImbalance ∋ Reward.career\n  Imbalance ∋ Effort.timePressure ~ EffortRewardImbalance ∋ Effort.timePressure : Demand TimePressure at Individual / Weekly\n  Imbalance ∋ Effort.interruptions ~ EffortRewardImbalance ∋ Effort.interruptions : Demand Interruption at Individual / Weekly\n  Imbalance ∋ Effort.responsibility ~ EffortRewardImbalance ∋ Effort.responsibility : Demand Responsibility at Individual / Weekly\n  Imbalance ∋ Effort.overload ~ EffortRewardImbalance ∋ Effort.workload : Demand Workload at Individual / Weekly\n  Imbalance ∋ Reward.money ~ EffortRewardImbalance ∋ Reward.money : Resource Pay at Individual / Weekly\n  Imbalance ∋ Reward.esteem ~ EffortRewardImbalance ∋ Reward.esteem : Resource Esteem at Individual / Weekly\n  Imbalance ∋ Reward.statusControl ~ EffortRewardImbalance ∋ Reward.career : Resource CareerSecurity at Individual / Weekly\n  overlap kind: identity (Imbalance and EffortRewardImbalance reduce to the same 7 primitive(s))\n  resolve with: declare_overlap Imbalance distinct_from EffortRewardImbalance \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 20,
+      "column": 2,
+      "message": "shares primitives Demand TimePressure, Demand Responsibility, Demand Workload with ChallengeDemands.timePressure, ChallengeDemands.responsibility, ChallengeDemands.workload\n  Imbalance ∋ Effort.timePressure ~ ChallengeDemands.timePressure : Demand TimePressure at Individual / Weekly\n  Imbalance ∋ Effort.responsibility ~ ChallengeDemands.responsibility : Demand Responsibility at Individual / Weekly\n  Imbalance ∋ Effort.overload ~ ChallengeDemands.workload : Demand Workload at Individual / Weekly\n  overlap kind: subtype (every primitive of ChallengeDemands is a primitive of Imbalance)\n  resolve with: declare_overlap Imbalance distinct_from ChallengeDemands \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 23,
+      "column": 2,
+      "message": "shares primitives Motivation Controlled, Attention Work with Overcommitment.striving, Overcommitment.inabilityToWithdraw\n  Overcommitment.striving ~ Overcommitment.striving : Motivation Controlled at Individual / Static\n  Overcommitment.inabilityToWithdraw ~ Overcommitment.inabilityToWithdraw : Attention Work at Individual / Static\n  overlap kind: identity (Overcommitment and Overcommitment reduce to the same 2 primitive(s))\n  resolve with: declare_overlap Overcommitment distinct_from Overcommitment \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 23,
+      "column": 2,
+      "message": "shares primitive Attention Work with FlowProneness.absorption\n  Overcommitment.inabilityToWithdraw ~ FlowProneness.absorption : Attention Work at Individual / Static\n  overlap kind: partial (1 of 2 primitive(s) of Overcommitment, 1 of 3 of FlowProneness)\n  resolve with: declare_overlap Overcommitment distinct_from FlowProneness \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 23,
+      "column": 2,
+      "message": "shares primitive Motivation Controlled with ObsessivePassion.motivation\n  Overcommitment.striving ~ ObsessivePassion.motivation : Motivation Controlled at Individual / Static\n  overlap kind: partial (1 of 2 primitive(s) of Overcommitment, 1 of 2 of ObsessivePassion)\n  resolve with: declare_overlap Overcommitment distinct_from ObsessivePassion \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 23,
+      "column": 2,
+      "message": "shares primitive Motivation Controlled with WorkingCompulsively.compulsion\n  Overcommitment.striving ~ WorkingCompulsively.compulsion : Motivation Controlled at Individual / Static\n  overlap kind: subtype (every primitive of WorkingCompulsively is a primitive of Overcommitment)\n  resolve with: declare_overlap Overcommitment distinct_from WorkingCompulsively \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 23,
+      "column": 2,
+      "message": "shares primitive Motivation Controlled with Workaholism ∋ WorkingCompulsively.compulsion\n  Overcommitment.striving ~ Workaholism ∋ WorkingCompulsively.compulsion : Motivation Controlled at Individual / Static\n  overlap kind: partial (1 of 2 primitive(s) of Overcommitment, 1 of 2 of Workaholism)\n  resolve with: declare_overlap Overcommitment distinct_from Workaholism \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 28,
+      "column": 2,
+      "message": "shares primitive Affect Negative High with Strain.affect\n  CardiovascularStrain.affect ~ Strain.affect : Affect Negative High at Individual / Weekly\n  overlap kind: partial (1 of 2 primitive(s) of CardiovascularStrain, 1 of 2 of Strain)\n  resolve with: declare_overlap CardiovascularStrain distinct_from Strain \"reason\" (or alias_of / subtype_of)"
+    }
+  ],
+  "contradiction_warnings": [],
+  "routing_notes": [],
+  "other_messages": [],
+  "lean_path": "Lemma/Generated/Siegrist1996.lean",
+  "repairs": 0,
+  "generated_at": "2026-11-01T18:36:59+00:00"
+}

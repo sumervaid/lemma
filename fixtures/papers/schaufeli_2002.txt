@@ -1,0 +1,15 @@
+TITLE: The measurement of engagement and burnout: a two sample confirmatory factor analytic approach
+REFERENCE: Schaufeli, W. B., Salanova, M., González-Romá, V. & Bakker, A. B. (2002). Journal of Happiness Studies, 3, 71-92.
+
+DEFINITIONS
+- Work engagement: a positive, fulfilling, work-related state of mind characterized by vigor, dedication, and absorption (p. 74).
+- Vigor: high levels of energy and mental resilience while working, willingness to invest effort, persistence (p. 74).
+- Dedication: a sense of significance, enthusiasm, inspiration, pride, and challenge (p. 74).
+- Absorption: being fully concentrated and deeply engrossed in one's work (p. 75).
+- Burnout (MBI-GS): exhaustion, cynicism, reduced professional efficacy.
+
+PROPOSITIONS
+1. Engagement and burnout are negatively related but distinct constructs (two-factor model fits better than one-factor).
+2. Engagement comprises three correlated factors (vigor, dedication, absorption).
+
+MEASUREMENT: Utrecht Work Engagement Scale (UWES), self-report, frequency anchors; samples of students and employees; cross-sectional confirmatory factor analysis at the individual level.

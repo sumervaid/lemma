@@ -1,0 +1,14 @@
+TITLE: Psychological conditions of personal engagement and disengagement at work
+REFERENCE: Kahn, W. A. (1990). Academy of Management Journal, 33(4), 692-724.
+
+DEFINITIONS
+- Personal engagement: the harnessing of organization members' selves to their work roles; people employ and express themselves physically, cognitively, and emotionally during role performances (p. 694).
+- Personal disengagement: the uncoupling of selves from work roles.
+- Psychological meaningfulness: a feeling of return on investments of self in role performances.
+- Psychological safety: a sense of being able to show and employ self without fear of negative consequences.
+- Psychological availability: the sense of having the physical, emotional, and psychological resources to engage.
+
+PROPOSITIONS
+1. Meaningfulness, safety and availability each increase personal engagement.
+
+MEASUREMENT: qualitative, two ethnographic studies (summer camp counselors, architecture firm); no scales, no horizon declared; individual level within role episodes.

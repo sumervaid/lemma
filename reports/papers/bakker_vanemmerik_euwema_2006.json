@@ -1,0 +1,39 @@
+{
+  "paper_id": "bakker_vanemmerik_euwema_2006",
+  "module": "BakkerVanemmerikEuwema2006",
+  "status": "failed",
+  "provider": "fixture",
+  "model": "hand-written fixture (no model run)",
+  "reason": "",
+  "ambiguities": [
+    "The crossover propositions are top-down: a team-level mean predicts an individual-level outcome. The kernel's scope check requires both constructs at the declared level and has no rule which lowers a level, so the proposition as stated at the individual level is expected to be rejected."
+  ],
+  "counts": {
+    "constructs": 1,
+    "propositions": 1,
+    "aggregations": 0,
+    "temporals": 0
+  },
+  "errors": [
+    {
+      "severity": "error",
+      "line": 12,
+      "column": 2,
+      "message": "scope mismatch in `team_burnout_crossover`: TeamBurnout lives at Team / Weekly but the proposition declares Individual / Weekly; no registered rule bridges the gap (needs an Aggregation from TeamBurnout to a Individual-level construct)"
+    }
+  ],
+  "overlap_warnings": [
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with TeamEngagement.vigor\n  TeamBurnout.energy ~ TeamEngagement.vigor : Energy at Team / Weekly\n  overlap kind: subtype (every primitive of TeamBurnout is a primitive of TeamEngagement)\n  resolve with: declare_overlap TeamBurnout distinct_from TeamEngagement \"reason\" (or alias_of / subtype_of)"
+    }
+  ],
+  "contradiction_warnings": [],
+  "routing_notes": [],
+  "other_messages": [],
+  "lean_path": "reports/failed/BakkerVanemmerikEuwema2006.lean",
+  "repairs": 0,
+  "generated_at": "2026-11-01T18:36:55+00:00"
+}

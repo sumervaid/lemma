@@ -1,0 +1,111 @@
+{
+  "paper_id": "maslach_jackson_1981",
+  "module": "MaslachJackson1981",
+  "status": "accepted",
+  "provider": "fixture",
+  "model": "hand-written fixture (no model run)",
+  "reason": "",
+  "ambiguities": [
+    "The MBI asks about frequency over an unspecified period; Weekly chosen to match the library.",
+    "Depersonalization is directed at service recipients; the vocabulary has no recipient target, so Identification .Work is used, which the compiler reports as identical to the library's cynicism."
+  ],
+  "counts": {
+    "constructs": 3,
+    "propositions": 1,
+    "aggregations": 0,
+    "temporals": 0
+  },
+  "errors": [],
+  "overlap_warnings": [
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Vigor.energy\n  EmotionalExhaustion.energy ~ Vigor.energy : Energy at Individual / Weekly\n  overlap kind: identity (EmotionalExhaustion and Vigor reduce to the same 1 primitive(s))\n  resolve with: declare_overlap EmotionalExhaustion distinct_from Vigor \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Engagement.vigor\n  EmotionalExhaustion.energy ~ Engagement.vigor : Energy at Individual / Weekly\n  overlap kind: subtype (every primitive of EmotionalExhaustion is a primitive of Engagement)\n  resolve with: declare_overlap EmotionalExhaustion distinct_from Engagement \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Exhaustion.energy\n  EmotionalExhaustion.energy ~ Exhaustion.energy : Energy at Individual / Weekly\n  overlap kind: identity (EmotionalExhaustion and Exhaustion reduce to the same 1 primitive(s))\n  resolve with: declare_overlap EmotionalExhaustion distinct_from Exhaustion \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Burnout ∋ Exhaustion.energy\n  EmotionalExhaustion.energy ~ Burnout ∋ Exhaustion.energy : Energy at Individual / Weekly\n  overlap kind: subtype (every primitive of EmotionalExhaustion is a primitive of Burnout)\n  resolve with: declare_overlap EmotionalExhaustion distinct_from Burnout \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Vitality.energy\n  EmotionalExhaustion.energy ~ Vitality.energy : Energy at Individual / Weekly\n  overlap kind: identity (EmotionalExhaustion and Vitality reduce to the same 1 primitive(s))\n  resolve with: declare_overlap EmotionalExhaustion distinct_from Vitality \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with Thriving ∋ Vitality.energy\n  EmotionalExhaustion.energy ~ Thriving ∋ Vitality.energy : Energy at Individual / Weekly\n  overlap kind: subtype (every primitive of EmotionalExhaustion is a primitive of Thriving)\n  resolve with: declare_overlap EmotionalExhaustion distinct_from Thriving \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 7,
+      "column": 2,
+      "message": "shares primitive Energy with ShiromVigor.physicalStrength\n  EmotionalExhaustion.energy ~ ShiromVigor.physicalStrength : Energy at Individual / Weekly\n  overlap kind: subtype (every primitive of EmotionalExhaustion is a primitive of ShiromVigor)\n  resolve with: declare_overlap EmotionalExhaustion distinct_from ShiromVigor \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 11,
+      "column": 2,
+      "message": "shares primitive Identification Work with Dedication.identification\n  Depersonalization.identification ~ Dedication.identification : Identification Work at Individual / Weekly\n  overlap kind: identity (Depersonalization and Dedication reduce to the same 1 primitive(s))\n  resolve with: declare_overlap Depersonalization distinct_from Dedication \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 11,
+      "column": 2,
+      "message": "shares primitive Identification Work with Engagement.dedication\n  Depersonalization.identification ~ Engagement.dedication : Identification Work at Individual / Weekly\n  overlap kind: subtype (every primitive of Depersonalization is a primitive of Engagement)\n  resolve with: declare_overlap Depersonalization distinct_from Engagement \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 11,
+      "column": 2,
+      "message": "shares primitive Identification Work with Cynicism.identification\n  Depersonalization.identification ~ Cynicism.identification : Identification Work at Individual / Weekly\n  overlap kind: identity (Depersonalization and Cynicism reduce to the same 1 primitive(s))\n  resolve with: declare_overlap Depersonalization distinct_from Cynicism \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 11,
+      "column": 2,
+      "message": "shares primitive Identification Work with Burnout ∋ Cynicism.identification\n  Depersonalization.identification ~ Burnout ∋ Cynicism.identification : Identification Work at Individual / Weekly\n  overlap kind: subtype (every primitive of Depersonalization is a primitive of Burnout)\n  resolve with: declare_overlap Depersonalization distinct_from Burnout \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitive Efficacy Work with ReducedEfficacy.efficacy\n  ReducedAccomplishment.efficacy ~ ReducedEfficacy.efficacy : Efficacy Work at Individual / Weekly\n  overlap kind: identity (ReducedAccomplishment and ReducedEfficacy reduce to the same 1 primitive(s))\n  resolve with: declare_overlap ReducedAccomplishment distinct_from ReducedEfficacy \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitive Efficacy Work with Burnout ∋ ReducedEfficacy.efficacy\n  ReducedAccomplishment.efficacy ~ Burnout ∋ ReducedEfficacy.efficacy : Efficacy Work at Individual / Weekly\n  overlap kind: subtype (every primitive of ReducedAccomplishment is a primitive of Burnout)\n  resolve with: declare_overlap ReducedAccomplishment distinct_from Burnout \"reason\" (or alias_of / subtype_of)"
+    },
+    {
+      "severity": "warning",
+      "line": 15,
+      "column": 2,
+      "message": "shares primitive Efficacy Work with PersonalResources.efficacy\n  ReducedAccomplishment.efficacy ~ PersonalResources.efficacy : Efficacy Work at Individual / Weekly\n  overlap kind: subtype (every primitive of ReducedAccomplishment is a primitive of PersonalResources)\n  resolve with: declare_overlap ReducedAccomplishment distinct_from PersonalResources \"reason\" (or alias_of / subtype_of)"
+    }
+  ],
+  "contradiction_warnings": [],
+  "routing_notes": [],
+  "other_messages": [],
+  "lean_path": "Lemma/Generated/MaslachJackson1981.lean",
+  "repairs": 0,
+  "generated_at": "2026-11-01T18:36:57+00:00"
+}

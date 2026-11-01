@@ -1,0 +1,54 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lean-and-python:
+    runs-on: ubuntu-latest
+    env:
+      LEAN_VERSION: v4.15.0
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Lean 4 from the release tarball
+        run: |
+          set -euo pipefail
+          curl -sSL -o lean.tar.zst "https://github.com/leanprover/lean4/releases/download/${LEAN_VERSION}/lean-${LEAN_VERSION#v}-linux.tar.zst"
+          mkdir -p "$HOME/lean"
+          tar --zstd -xf lean.tar.zst -C "$HOME/lean" --strip-components=1
+          echo "$HOME/lean/bin" >> "$GITHUB_PATH"
+
+      - name: Lean version
+        run: lean --version && lake --version
+
+      - name: Cache Lake build
+        uses: actions/cache@v4
+        with:
+          path: .lake
+          key: lake-${{ env.LEAN_VERSION }}-${{ hashFiles('lakefile.lean', 'lean-toolchain', 'Lemma/**/*.lean', 'LemmaTests/**/*.lean') }}
+
+      - name: Build library and tests
+        run: lake build Lemma LemmaTests
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install pipeline
+        run: python -m pip install -e "pipeline[dev]"
+
+      - name: Lint
+        run: cd pipeline && ruff check . && ruff format --check .
+
+      - name: Python tests
+        run: cd pipeline && python -m pytest -q
+
+      - name: Offline pipeline end to end
+        run: |
+          cd pipeline
+          python -m lemma.cli --root .. formalize --offline
+          python -m lemma.cli --root .. report --no-build
+          git -C .. diff --stat -- README.md reports/library.md || true

@@ -1,0 +1,53 @@
+{
+  "paper_id": "kahn_1990",
+  "module": "Kahn1990",
+  "status": "failed",
+  "provider": "fixture",
+  "model": "hand-written fixture (no model run)",
+  "reason": "",
+  "ambiguities": [
+    "Kahn's three psychological conditions (meaningfulness, safety, availability) have no primitive in the pilot vocabulary; the module declares them as new types, which the compiler is expected to reject at the reduction check.",
+    "Personal engagement is defined across physical, cognitive and emotional expression in a role episode; Momentary chosen.",
+    "The studies are ethnographic; evidence declared None."
+  ],
+  "counts": {
+    "constructs": 2,
+    "propositions": 1,
+    "aggregations": 0,
+    "temporals": 0
+  },
+  "errors": [
+    {
+      "severity": "error",
+      "line": 22,
+      "column": 2,
+      "message": "construct `PsychologicalConditions` does not reduce to primitives\n  Meaningfulness at meaningfulness: `Meaningfulness` is neither a registered primitive, a registered construct, a product, nor a structure extending `Construct`: the construct rests on an undefined term\n  Safety at safety: `Safety` is neither a registered primitive, a registered construct, a product, nor a structure extending `Construct`: the construct rests on an undefined term"
+    },
+    {
+      "severity": "error",
+      "line": 28,
+      "column": 43,
+      "message": "failed to synthesize\n  IsConstruct PsychologicalConditions\nAdditional diagnostic information may be available using the `set_option diagnostics true` command."
+    },
+    {
+      "severity": "error",
+      "line": 28,
+      "column": 2,
+      "message": "`conditions_engagement` must have type `Lemma.Proposition A B`, found `sorry`"
+    }
+  ],
+  "overlap_warnings": [
+    {
+      "severity": "warning",
+      "line": 16,
+      "column": 2,
+      "message": "shares primitive Attention Work with Flow.absorption\n  PersonalEngagement.cognitive ~ Flow.absorption : Attention Work at Individual / Momentary\n  overlap kind: partial (1 of 3 primitive(s) of PersonalEngagement, 1 of 3 of Flow)\n  resolve with: declare_overlap PersonalEngagement distinct_from Flow \"reason\" (or alias_of / subtype_of)"
+    }
+  ],
+  "contradiction_warnings": [],
+  "routing_notes": [],
+  "other_messages": [],
+  "lean_path": "reports/failed/Kahn1990.lean",
+  "repairs": 0,
+  "generated_at": "2026-11-01T18:36:56+00:00"
+}

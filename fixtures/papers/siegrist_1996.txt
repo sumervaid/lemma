@@ -1,0 +1,15 @@
+TITLE: Adverse health effects of high-effort/low-reward conditions
+REFERENCE: Siegrist, J. (1996). Journal of Occupational Health Psychology, 1(1), 27-41.
+
+DEFINITIONS
+- Effort: extrinsic effort (demands and obligations of the job: time pressure, interruptions, responsibility, overload) and intrinsic effort (a personal pattern of coping, later termed overcommitment: excessive striving, need for approval, inability to withdraw from work).
+- Reward: money, esteem, and status control including job security and career opportunities (p. 30).
+- Effort-reward imbalance: the condition of high effort spent and low reward received, violating reciprocity.
+- Outcomes: sustained strain reactions, cardiovascular risk, and ill health.
+
+PROPOSITIONS
+1. High effort combined with low reward (imbalance) increases the risk of strain and cardiovascular disease. Evidence: prospective cohort studies of blue-collar workers and managers reviewed in the paper.
+2. Overcommitment (intrinsic effort) independently increases strain.
+3. Overcommitment amplifies the effect of imbalance on strain.
+
+MEASUREMENT: self-report scales for effort, reward and overcommitment; health outcomes from clinical and administrative records; individual level, prospective designs.

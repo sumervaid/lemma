@@ -1,0 +1,23 @@
+import Lemma.Theories
+
+namespace Lemma.Generated.MaslachJackson1981
+open Lemma.Theories
+
+/-- Emotional exhaustion (Maslach & Jackson 1981, p. 99). -/
+@[construct] structure EmotionalExhaustion extends AffectiveState (level := .Individual) (horizon := .Weekly) where
+  energy : Energy
+
+/-- Depersonalization: an impersonal response toward recipients (Maslach & Jackson 1981, p. 99). -/
+@[construct] structure Depersonalization extends AffectiveState (level := .Individual) (horizon := .Weekly) where
+  identification : Identification .Work
+
+/-- Reduced personal accomplishment (Maslach & Jackson 1981, p. 99). -/
+@[construct] structure ReducedAccomplishment extends AffectiveState (level := .Individual) (horizon := .Weekly) where
+  efficacy : Efficacy .Work
+
+/-- Burnout relates to intention to leave (Maslach & Jackson 1981, p. 108). -/
+@[proposition] def exhaustion_turnover : Proposition EmotionalExhaustion Engagement.TurnoverIntention :=
+  { direction := .Positive, level := .Individual, horizon := .Weekly,
+    evidence := .CrossSectional, citation := "Maslach & Jackson 1981, J. Occup. Behav. 2, 99-113" }
+
+end Lemma.Generated.MaslachJackson1981

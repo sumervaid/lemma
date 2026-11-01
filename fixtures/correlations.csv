@@ -1,0 +1,12 @@
+construct_a,construct_b,rho,k,n,source,status,note
+Exhaustion,Vigor,-0.60,,,Cole Walter Bedeian & O'Boyle 2012 J. Manage. 38 1550-1581,placeholder,Corrected correlation between MBI exhaustion and UWES vigor to be taken from Table 2 of the meta-analysis; value here is illustrative
+Cynicism,Dedication,-0.65,,,Cole Walter Bedeian & O'Boyle 2012 J. Manage. 38 1550-1581,placeholder,Corrected correlation between MBI cynicism and UWES dedication to be taken from Table 2; value illustrative
+ReducedEfficacy,Absorption,-0.35,,,Cole Walter Bedeian & O'Boyle 2012 J. Manage. 38 1550-1581,placeholder,Illustrative
+Burnout,Engagement,-0.62,,,Cole Walter Bedeian & O'Boyle 2012 J. Manage. 38 1550-1581,placeholder,Overall burnout-engagement corrected correlation to be checked
+Engagement,OrganizationalCommitment,0.59,,,Christian Garza & Slaughter 2011 Personnel Psychology 64 89-136,recalled,Recalled from Table 3; verify before use
+Engagement,TaskPerformance,0.43,,,Christian Garza & Slaughter 2011 Personnel Psychology 64 89-136,recalled,Recalled from Table 3; verify before use
+Thriving,Engagement,0.60,,,Porath Spreitzer Gibson & Garnett 2012 J. Organ. Behav. 33 250-275,placeholder,Study-level correlation reported in the validation paper to be checked
+Vitality,Vigor,0.75,,,Porath Spreitzer Gibson & Garnett 2012 J. Organ. Behav. 33 250-275,placeholder,Illustrative
+ShiromVigor,Vigor,0.70,,,Shirom 2011 Rev. Gen. Psychol. 15 50-64,placeholder,Illustrative
+WorkingExcessively,Engagement,0.30,,,Schaufeli Taris & van Rhenen 2008 Appl. Psychol. 57 173-203,placeholder,Illustrative
+JobDemands,Effort,0.85,,,,placeholder,No meta-analytic estimate located; illustrative value chosen to show the empirically-indistinguishable cell

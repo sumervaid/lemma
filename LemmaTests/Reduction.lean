@@ -13,7 +13,7 @@ open Lemma
 
 /--
 error: construct `BadNat` does not reduce to primitives
-  Nat at count: `Nat` is neither a registered primitive, a registered construct, nor a structure
+  Nat at count: `Nat` is neither a registered primitive, a registered construct, a product, nor a structure extending `Construct`: the construct rests on an undefined term
 -/
 #guard_msgs in
 /-- A construct with a raw numeric field. -/
